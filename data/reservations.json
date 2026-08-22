@@ -13,39 +13,7 @@
     "note": "Těším se na první trénink",
     "gdprConsent": true,
     "status": "Potvrzená",
-    "createdAt": "2026-08-21T14:17:31.496Z"
-  },
-  {
-    "scheduleId": "tesak-utery",
-    "scheduleTitle": "Šerm tesákem",
-    "date": "2025-09-16",
-    "time": "19:00–20:00",
-    "firstName": "Test",
-    "lastName": "User",
-    "email": "test@example.com",
-    "phone": "+420123456789",
-    "age": 20,
-    "note": "Unit test",
-    "gdprConsent": true,
-    "id": "res_1787321851505_pifst",
-    "status": "Potvrzená",
-    "createdAt": "2026-08-21T14:17:31.505Z"
-  },
-  {
-    "scheduleId": "tesak-utery",
-    "scheduleTitle": "Šerm tesákem",
-    "date": "2025-09-16",
-    "time": "19:00–20:00",
-    "firstName": "Test",
-    "lastName": "User",
-    "email": "test@example.com",
-    "phone": "+420123456789",
-    "age": 20,
-    "note": "Unit test",
-    "gdprConsent": true,
-    "id": "res_1787376225519_fhryc",
-    "status": "Potvrzená",
-    "createdAt": "2026-08-22T05:23:45.519Z"
+    "createdAt": "2026-08-22T05:49:52.023Z"
   },
   {
     "scheduleId": "test",
@@ -58,9 +26,9 @@
     "phone": "123456789",
     "age": 20,
     "gdprConsent": true,
-    "id": "res_1787376253665_83wep",
+    "id": "res_1787377792032_bned7",
     "status": "Nová",
-    "createdAt": "2026-08-22T05:24:13.665Z"
+    "createdAt": "2026-08-22T05:49:52.033Z"
   },
   {
     "scheduleId": "tesak-utery",
@@ -74,70 +42,8 @@
     "age": 20,
     "note": "Unit test",
     "gdprConsent": true,
-    "id": "res_1787376253690_ych0k",
+    "id": "res_1787377792036_doja9",
     "status": "Potvrzená",
-    "createdAt": "2026-08-22T05:24:13.690Z"
-  },
-  {
-    "scheduleId": "tesak-utery",
-    "scheduleTitle": "Šerm tesákem",
-    "date": "2025-09-16",
-    "time": "19:00–20:00",
-    "firstName": "Test",
-    "lastName": "User",
-    "email": "test@example.com",
-    "phone": "+420123456789",
-    "age": 20,
-    "note": "Unit test",
-    "gdprConsent": true,
-    "id": "res_1787376450674_cylwn",
-    "status": "Potvrzená",
-    "createdAt": "2026-08-22T05:27:30.674Z"
-  },
-  {
-    "scheduleId": "test",
-    "scheduleTitle": "Test schedule",
-    "date": "2025-01-01",
-    "time": "19:00",
-    "firstName": "Test",
-    "lastName": "User",
-    "email": "test@example.com",
-    "phone": "123456789",
-    "age": 20,
-    "gdprConsent": true,
-    "id": "res_1787376450686_ctq2b",
-    "status": "Nová",
-    "createdAt": "2026-08-22T05:27:30.686Z"
-  },
-  {
-    "scheduleId": "test",
-    "scheduleTitle": "Test schedule",
-    "date": "2025-01-01",
-    "time": "19:00",
-    "firstName": "Test",
-    "lastName": "User",
-    "email": "test@example.com",
-    "phone": "123456789",
-    "age": 20,
-    "gdprConsent": true,
-    "id": "res_1787376505436_61ll6",
-    "status": "Nová",
-    "createdAt": "2026-08-22T05:28:25.436Z"
-  },
-  {
-    "scheduleId": "tesak-utery",
-    "scheduleTitle": "Šerm tesákem",
-    "date": "2025-09-16",
-    "time": "19:00–20:00",
-    "firstName": "Test",
-    "lastName": "User",
-    "email": "test@example.com",
-    "phone": "+420123456789",
-    "age": 20,
-    "note": "Unit test",
-    "gdprConsent": true,
-    "id": "res_1787376505439_y9ur1",
-    "status": "Potvrzená",
-    "createdAt": "2026-08-22T05:28:25.439Z"
+    "createdAt": "2026-08-22T05:49:52.036Z"
   }
 ]

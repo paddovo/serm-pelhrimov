@@ -12,7 +12,7 @@
     "emergencyContact": "Jan Svoboda - 608 111 222",
     "gdprConsent": true,
     "status": "Nová",
-    "createdAt": "2026-08-21T14:17:31.496Z"
+    "createdAt": "2026-08-22T05:49:52.023Z"
   },
   {
     "firstName": "Jan",
@@ -24,64 +24,8 @@
     "selectedCourse": "Šerm dlouhým mečem",
     "emergencyContact": "Eva Testerová - 123456789",
     "gdprConsent": true,
-    "id": "app_1787321851507_p49td",
+    "id": "app_1787377792038_bd19g",
     "status": "Nová",
-    "createdAt": "2026-08-21T14:17:31.507Z"
-  },
-  {
-    "firstName": "Jan",
-    "lastName": "Tester",
-    "birthDate": "2000-01-01",
-    "email": "jan@test.com",
-    "phone": "+420987654321",
-    "address": "Pelhřimov 1",
-    "selectedCourse": "Šerm dlouhým mečem",
-    "emergencyContact": "Eva Testerová - 123456789",
-    "gdprConsent": true,
-    "id": "app_1787376225522_14oxk",
-    "status": "Nová",
-    "createdAt": "2026-08-22T05:23:45.522Z"
-  },
-  {
-    "firstName": "Jan",
-    "lastName": "Tester",
-    "birthDate": "2000-01-01",
-    "email": "jan@test.com",
-    "phone": "+420987654321",
-    "address": "Pelhřimov 1",
-    "selectedCourse": "Šerm dlouhým mečem",
-    "emergencyContact": "Eva Testerová - 123456789",
-    "gdprConsent": true,
-    "id": "app_1787376253692_916wd",
-    "status": "Nová",
-    "createdAt": "2026-08-22T05:24:13.692Z"
-  },
-  {
-    "firstName": "Jan",
-    "lastName": "Tester",
-    "birthDate": "2000-01-01",
-    "email": "jan@test.com",
-    "phone": "+420987654321",
-    "address": "Pelhřimov 1",
-    "selectedCourse": "Šerm dlouhým mečem",
-    "emergencyContact": "Eva Testerová - 123456789",
-    "gdprConsent": true,
-    "id": "app_1787376450677_sxvij",
-    "status": "Nová",
-    "createdAt": "2026-08-22T05:27:30.677Z"
-  },
-  {
-    "firstName": "Jan",
-    "lastName": "Tester",
-    "birthDate": "2000-01-01",
-    "email": "jan@test.com",
-    "phone": "+420987654321",
-    "address": "Pelhřimov 1",
-    "selectedCourse": "Šerm dlouhým mečem",
-    "emergencyContact": "Eva Testerová - 123456789",
-    "gdprConsent": true,
-    "id": "app_1787376505441_ipxjz",
-    "status": "Nová",
-    "createdAt": "2026-08-22T05:28:25.441Z"
+    "createdAt": "2026-08-22T05:49:52.038Z"
   }
 ]
