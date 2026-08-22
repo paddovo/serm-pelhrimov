@@ -45,5 +45,36 @@
     "id": "res_1787377792036_doja9",
     "status": "Potvrzená",
     "createdAt": "2026-08-22T05:49:52.036Z"
+  },
+  {
+    "scheduleId": "test",
+    "scheduleTitle": "Test schedule",
+    "date": "2025-01-01",
+    "time": "19:00",
+    "firstName": "Test",
+    "lastName": "User",
+    "email": "test@example.com",
+    "phone": "123456789",
+    "age": 20,
+    "gdprConsent": true,
+    "id": "res_1787379103859_udcda",
+    "status": "Nová",
+    "createdAt": "2026-08-22T06:11:43.859Z"
+  },
+  {
+    "scheduleId": "tesak-utery",
+    "scheduleTitle": "Šerm tesákem",
+    "date": "2025-09-16",
+    "time": "19:00–20:00",
+    "firstName": "Test",
+    "lastName": "User",
+    "email": "test@example.com",
+    "phone": "+420123456789",
+    "age": 20,
+    "note": "Unit test",
+    "gdprConsent": true,
+    "id": "res_1787379103922_eirvu",
+    "status": "Potvrzená",
+    "createdAt": "2026-08-22T06:11:43.922Z"
   }
 ]

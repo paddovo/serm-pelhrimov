@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Shield, Menu, X, ChevronRight } from 'lucide-react';
+import { siteConfig } from '@/config/site';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -18,12 +19,12 @@ export default function Header() {
 
   const navLinks = [
     { name: 'Úvod', href: '/' },
-    { name: 'O škole', href: '/o-nas' },
+    { name: 'O nás', href: '/o-nas' },
     { name: 'Tréninky', href: '/treninky' },
-    { name: 'Zbraně', href: '/zbrane' },
-    { name: 'Jak začít', href: '/jak-zacit' },
+    { name: 'Disciplíny', href: '/discipliny' },
+    { name: 'Pro začátečníky', href: '/pro-zacatecniky' },
     { name: 'Galerie', href: '/galerie' },
-    { name: 'Kalendář', href: '/kalendar' },
+    { name: 'Akce', href: '/kalendar' },
     { name: 'Kontakt', href: '/kontakt' },
   ];
 
@@ -31,8 +32,8 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-slate-950/90 backdrop-blur-md shadow-lg border-b border-amber-900/40 py-3'
-          : 'bg-gradient-to-b from-slate-950/90 to-transparent py-5'
+          ? 'bg-slate-950/95 backdrop-blur-md shadow-2xl border-b border-amber-900/40 py-3'
+          : 'bg-gradient-to-b from-slate-950/95 via-slate-950/80 to-transparent py-5'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -52,12 +53,12 @@ export default function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-6">
+        <nav className="hidden xl:flex items-center gap-5">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-slate-300 hover:text-amber-400 transition-colors uppercase tracking-wider"
+              className="text-xs font-semibold text-slate-300 hover:text-amber-400 transition-colors uppercase tracking-wider"
             >
               {link.name}
             </Link>
@@ -65,19 +66,19 @@ export default function Header() {
         </nav>
 
         {/* CTA Button */}
-        <div className="hidden lg:flex items-center gap-4">
+        <div className="hidden xl:flex items-center gap-4">
           <Link
             href="/prihlaska"
-            className="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-5 py-2.5 rounded text-sm uppercase tracking-wider shadow-lg shadow-amber-500/20 transition-all hover:scale-105 flex items-center gap-1.5"
+            className="bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold px-5 py-2 rounded text-xs uppercase tracking-wider shadow-lg shadow-amber-500/20 transition-all hover:scale-105 flex items-center gap-1.5"
           >
-            Přihlásit se <ChevronRight className="w-4 h-4" />
+            Chci začít <ChevronRight className="w-4 h-4" />
           </Link>
         </div>
 
         {/* Mobile Menu Toggle */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="lg:hidden text-slate-300 hover:text-amber-400 p-2"
+          className="xl:hidden text-slate-300 hover:text-amber-400 p-2"
           aria-label="Otevřít menu"
         >
           {mobileMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
@@ -86,13 +87,13 @@ export default function Header() {
 
       {/* Mobile Menu Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-slate-950/95 border-b border-amber-900/40 backdrop-blur-lg px-4 pt-4 pb-6 space-y-3">
+        <div className="xl:hidden bg-slate-950/98 border-b border-amber-900/40 backdrop-blur-lg px-4 pt-4 pb-6 space-y-3">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 text-base font-medium text-slate-200 hover:text-amber-400 uppercase tracking-wider border-b border-slate-800/50"
+              className="block py-2 text-sm font-medium text-slate-200 hover:text-amber-400 uppercase tracking-wider border-b border-slate-800/50"
             >
               {link.name}
             </Link>
@@ -101,9 +102,9 @@ export default function Header() {
             <Link
               href="/prihlaska"
               onClick={() => setMobileMenuOpen(false)}
-              className="block w-full text-center bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-3 rounded uppercase tracking-wider shadow-md"
+              className="block w-full text-center bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold py-3 rounded uppercase tracking-wider shadow-md text-sm"
             >
-              Přihlásit se
+              Chci začít šermovat
             </Link>
           </div>
         </div>

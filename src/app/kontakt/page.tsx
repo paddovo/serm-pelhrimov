@@ -5,7 +5,7 @@ import { siteConfig } from '@/config/site';
 
 export const metadata = {
   title: `Kontakt | ${siteConfig.name}`,
-  description: 'Kontaktní údaje, e-mail, telefon, sociální sítě a adresa tréninků Školy historického šermu Pelhřimov.',
+  description: 'Kontaktní údaje, e-mail, telefon, sociální sítě, adresa a mapa tréninků v Pelhřimovské sportovní hale.',
 };
 
 export default function ContactPage() {
@@ -18,10 +18,10 @@ export default function ContactPage() {
             Kde nás najdete
           </span>
           <h1 className="text-3xl sm:text-5xl font-extrabold font-serif uppercase tracking-tight text-slate-100">
-            Kontakt
+            Kontakt & Tréninky
           </h1>
           <p className="text-slate-400 text-base sm:text-lg">
-            Máte dotaz k tréninkům, výuce nebo možnostem vystoupení? Neváhejte nás kontaktovat.
+            Máte dotaz k tréninkům nebo chcete přijít na první zkušební lekci? Neváhejte nás kontaktovat.
           </p>
         </div>
 
@@ -30,7 +30,7 @@ export default function ContactPage() {
           {/* Direct Details */}
           <div className="bg-slate-900 border border-slate-800 rounded-xl p-8 space-y-6">
             <h2 className="text-xl font-bold font-serif text-slate-100 uppercase border-b border-slate-800 pb-3">
-              Kontaktní informace
+              Kontaktní údaje
             </h2>
 
             <ul className="space-y-4 text-sm">
@@ -93,13 +93,13 @@ export default function ContactPage() {
                 <Shield className="w-4 h-4" /> Záštita
               </div>
               <h2 className="text-xl font-bold font-serif text-slate-100 uppercase">
-                Propojení s Aurinko Félag
+                Škola historického šermu Pelhřimov
               </h2>
               <p className="text-slate-300 text-sm leading-relaxed">
-                Škola historického šermu Pelhřimov působí pod hlavičkou a v úzké součinnosti s projektem Aurinko Félag.
+                Působíme v Pelhřimově. Naším cílem je výuka historických bojových umění s důrazem na techniku, sport a přátelskou komunitu.
               </p>
               <p className="text-xs text-slate-400 leading-relaxed">
-                Spojuje nás sdílené nadšení pro historii, rekonstrukci dobových řemesel a bezpečný historický šerm.
+                Pracujeme v těsné součinnosti s mateřským projektem Aurinko Félag.
               </p>
             </div>
 
@@ -113,6 +113,27 @@ export default function ContactPage() {
                 Navštívit www.aurinkofelag.cz <ExternalLink className="w-4 h-4" />
               </a>
             </div>
+          </div>
+        </div>
+
+        {/* Interactive Map Box Container for Sportovní Hala Pelhřimov */}
+        <div className="bg-slate-900 border border-slate-800 rounded-xl p-8 space-y-4">
+          <h2 className="text-xl font-bold font-serif text-slate-100 uppercase">
+            Kde trénujeme: Pelhřimovská sportovní hala
+          </h2>
+          <p className="text-xs text-slate-400">
+            Tréninky probíhají v tělocvičně Pelhřimovské sportovní haly. Bezproblémové parkování přímo před objektem.
+          </p>
+          <div className="w-full h-72 bg-slate-950 border border-slate-800 rounded-lg overflow-hidden relative flex items-center justify-center">
+            <iframe
+              title="Pelhřimovská sportovní hala Mapa"
+              width="100%"
+              height="100%"
+              style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg)' }}
+              loading="lazy"
+              allowFullScreen
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2611.5!2d15.22!3d49.43!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDnCsDI1JzQ4LjAiTiAxNcKwMTMnMTIuMCJF!5e0!3m2!1scs!2scz!4v1620000000000!5m2!1scs!2scz"
+            />
           </div>
         </div>
       </div>

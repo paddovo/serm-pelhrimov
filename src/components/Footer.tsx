@@ -56,16 +56,17 @@ export default function Footer() {
           {/* Col 2: Navigation */}
           <div>
             <h3 className="text-slate-200 font-bold uppercase tracking-wider text-sm mb-4 border-b border-amber-900/40 pb-2">
-              Rychlé odkazy
+              Hlavní menu
             </h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/" className="hover:text-amber-400 transition-colors">Úvodní stránka</Link></li>
-              <li><Link href="/o-nas" className="hover:text-amber-400 transition-colors">O škole</Link></li>
-              <li><Link href="/treninky" className="hover:text-amber-400 transition-colors">Rozvrh tréninků</Link></li>
-              <li><Link href="/zbrane" className="hover:text-amber-400 transition-colors">Historické zbraně</Link></li>
-              <li><Link href="/jak-zacit" className="hover:text-amber-400 transition-colors">Jak začít šermovat</Link></li>
-              <li><Link href="/rezervace" className="hover:text-amber-400 transition-colors">Rezervace tréninku</Link></li>
-              <li><Link href="/prihlaska" className="hover:text-amber-400 transition-colors">Přihláška do školy</Link></li>
+              <li><Link href="/" className="hover:text-amber-400 transition-colors">Úvod</Link></li>
+              <li><Link href="/o-nas" className="hover:text-amber-400 transition-colors">O nás</Link></li>
+              <li><Link href="/treninky" className="hover:text-amber-400 transition-colors">Tréninky</Link></li>
+              <li><Link href="/discipliny" className="hover:text-amber-400 transition-colors">Disciplíny</Link></li>
+              <li><Link href="/pro-zacatecniky" className="hover:text-amber-400 transition-colors">Pro začátečníky</Link></li>
+              <li><Link href="/galerie" className="hover:text-amber-400 transition-colors">Galerie</Link></li>
+              <li><Link href="/kalendar" className="hover:text-amber-400 transition-colors">Akce</Link></li>
+              <li><Link href="/kontakt" className="hover:text-amber-400 transition-colors">Kontakt</Link></li>
             </ul>
           </div>
 
@@ -101,7 +102,7 @@ export default function Footer() {
             </h3>
             <div className="space-y-3 text-sm">
               <p className="text-xs text-slate-400">
-                Škola historického šermu Pelhřimov působí v rámci širšího projektu:
+                Škola historického šermu Pelhřimov je samostatný projekt.
               </p>
               <a
                 href={siteConfig.parentOrganization.url}
