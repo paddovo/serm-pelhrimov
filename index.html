@@ -10,35 +10,11 @@
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-amber-500 selection:text-slate-950 flex flex-col min-h-screen">
 
-  <!-- CINEMATIC FENCING INTRO OVERLAY -->
-  <div id="intro-overlay" class="fixed inset-0 z-50 bg-slate-950 flex flex-col items-center justify-center overflow-hidden transition-opacity duration-1000">
-    <canvas id="intro-canvas" class="absolute inset-0 w-full h-full object-cover"></canvas>
-
-    <div class="relative z-10 text-center px-4 space-y-6 max-w-3xl">
-      <div id="intro-text" class="space-y-4 opacity-0 transition-opacity duration-1000">
-        <span class="text-amber-400 font-bold text-xs uppercase tracking-widest block">Pelhřimov 15. století</span>
-        <h1 className="text-3xl sm:text-5xl font-extrabold font-serif text-slate-100 uppercase tracking-wider">
-          ŠKOLA HISTORICKÉHO ŠERMU
-        </h1>
-        <p class="text-slate-300 text-sm sm:text-base font-serif italic">
-          „Jeden sek ruší druhý, bod protíná kryt.“
-        </p>
-      </div>
-    </div>
-
-    <!-- Skip button -->
-    <button id="skip-intro-btn" class="absolute bottom-6 right-6 z-20 bg-slate-900/80 hover:bg-slate-900 text-amber-400 border border-amber-500/40 px-4 py-2 rounded text-xs font-bold uppercase tracking-wider transition-all">
-      Přeskočit intro ➔
-    </button>
-  </div>
-
   <!-- HEADER / NAVIGATION -->
   <header class="fixed top-0 left-0 right-0 z-40 bg-slate-950/95 backdrop-blur-md border-b border-amber-900/40 py-3">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-3 group">
-        <div class="w-10 h-10 rounded-full bg-amber-500/10 border border-amber-500/40 flex items-center justify-center text-amber-400 group-hover:scale-105 transition-transform">
-          🛡️
-        </div>
+        <img src="images/logo.png" alt="Škola historického šermu Pelhřimov" class="h-12 w-auto object-contain group-hover:scale-105 transition-transform">
         <div class="flex flex-col">
           <span class="font-bold text-lg tracking-wider text-amber-400 uppercase font-serif">ŠHŠ Pelhřimov</span>
           <span class="text-[10px] text-slate-400 tracking-widest uppercase">Škola historického šermu</span>
@@ -235,6 +211,5 @@
   </footer>
 
   <script src="js/main.js"></script>
-  <script src="js/intro.js"></script>
 </body>
 </html>

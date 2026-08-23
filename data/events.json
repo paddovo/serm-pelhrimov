@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "title": "Zahajovací trénink nového půlroku",
+    "date": "2025-09-02",
+    "time": "17:30 - 19:30",
+    "location": "Pelhřimovská sportovní hala",
+    "description": "První trénink po prázdninách otevřený pro stávající členy i nové zájemce o historický šerm.",
+    "type": "trenink"
+  },
+  {
+    "id": 2,
+    "title": "Nábor nováčků do ŠHŠ Pelhřimov",
+    "date": "2025-09-16",
+    "time": "17:30 - 19:00",
+    "location": "Pelhřimovská sportovní hala",
+    "description": "Vyzkoušejte si šerm dlouhým mečem na vlastní kůži. Veškeré vybavení pro nováčky zapůjčíme.",
+    "type": "nabor"
+  },
+  {
+    "id": 3,
+    "title": "Seminář: Liechtenauerův dlouhý meč",
+    "date": "2025-10-18",
+    "time": "09:00 - 16:00",
+    "location": "Telocvična Pelhřimov",
+    "description": "Celodenní intenzivní seminář zaměřený na základy krytů, vazeb a pět seků německé školy.",
+    "type": "seminar"
+  }
+]

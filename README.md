@@ -11,7 +11,7 @@ Klasický statický HTML web pro **Školu historického šermu Pelhřimov**.
 
 ```
 /
-├── index.html            # Úvodní stránka s filmovým intrem
+├── index.html            # Úvodní hlavní stránka
 ├── o-nas.html            # O škole
 ├── kurzy.html            # Tréninky a rozvrh
 ├── treninky.html         # Přesměrování na kurzy.html
@@ -29,7 +29,6 @@ Klasický statický HTML web pro **Školu historického šermu Pelhřimov**.
 │   └── style.css         # Hlavní CSS styl
 ├── js/
 │   ├── main.js           # Menu a formulářový skript
-│   ├── intro.js          # Cinematic fencing intro canvas skript
 │   ├── galerie.js        # Lightbox modal skript
 │   ├── kalendar.js       # Načítání akcí z data/events.json
 │   └── admin.js          # Skript pro administraci
