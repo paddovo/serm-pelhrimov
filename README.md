@@ -1,69 +1,48 @@
 # Škola historického šermu Pelhřimov (www.sermpelhrimov.cz)
 
-Samostatný webový projekt pro **Školu historického šermu Pelhřimov**.
+Klasický statický HTML web pro **Školu historického šermu Pelhřimov**.
 
 - **Doména:** `www.sermpelhrimov.cz`
-- **Technologie:** Next.js 14, TypeScript, Tailwind CSS, Lucide React
-- **Hosting:** Vercel
+- **Architektura:** Samostatné HTML soubory, CSS (`css/style.css`), JavaScript (`js/`), Vercel (`vercel.json`)
 
 ---
 
-## 🚀 Lokální spuštění
+## 📁 Struktura souborů
 
-1. **Instalace závislostí:**
-   ```bash
-   npm install
-   ```
-
-2. **Spuštění vývojového serveru:**
-   ```bash
-   npm run dev
-   ```
-   Aplikace poběží na `http://localhost:3000`.
-
-3. **Spuštění testů:**
-   ```bash
-   npm run test
-   ```
-
-4. **Kompilace (Build):**
-   ```bash
-   npm run build
-   ```
-
----
-
-## ⚙️ Konfigurace údajů (Ceny, Časy, Kontakty)
-
-Veškeré měnitelné údaje o škole jsou odděleny od kódu v souboru:
-`src/config/site.ts`
-
-Upravit zde můžete:
-- Název školy a popis
-- Kontaktní e-mail, telefon a adresu
-- Ceník semestrálního kurzovného
-- Rozvrh tréninků (Úterý, Pátek, zbraně, kapacity)
-- Odkazy na sociální sítě (Facebook, Instagram, YouTube)
-- Odkaz na Aurinko Félag
+```
+/
+├── index.html            # Úvodní stránka s filmovým intrem
+├── o-nas.html            # O škole
+├── kurzy.html            # Tréninky a rozvrh
+├── treninky.html         # Přesměrování na kurzy.html
+├── galerie.html          # Fotogalerie s Lightboxem
+├── kalendar-akci.html    # Kalendář akcí
+├── kalendar.html         # Přesměrování na kalendar-akci.html
+├── kontakt.html          # Kontakt a mapa haly
+├── pro-zacatecniky.html  # První trénink & FAQ
+├── discipliny.html       # Zbraně a disciplíny
+├── ochrana-osobnich-udaju.html # GDPR
+├── cookies.html          # Zásady cookies
+├── admin/
+│   └── index.html        # Neveřejná administrace
+├── css/
+│   └── style.css         # Hlavní CSS styl
+├── js/
+│   ├── main.js           # Menu a formulářový skript
+│   ├── intro.js          # Cinematic fencing intro canvas skript
+│   ├── galerie.js        # Lightbox modal skript
+│   ├── kalendar.js       # Načítání akcí z data/events.json
+│   └── admin.js          # Skript pro administraci
+└── data/
+    └── events.json       # Datový soubor s akcemi
+```
 
 ---
 
-## 🔐 Administrace a heslo
+## ✏️ Jak ručně upravit stránku na GitHubu
 
-- **Administrační rozhraní:** `/admin`
-- **Přístupové heslo:** Nastavte v prostředí Vercel jako `ADMIN_PASSWORD`. Výchozí hodnota je `serm2025`.
-
----
-
-## 🌐 Deployment na Vercel a WEDOS DNS
-
-### Vercel:
-1. Vytvořte nový projekt ve Vercelu napojený na GitHub repozitář `paddovo/serm-pelhrimov`.
-2. Přidejte doménu `www.sermpelhrimov.cz` i apex `sermpelhrimov.cz`.
-3. V nastavení Environment Variables zadejte:
-   - `ADMIN_PASSWORD`: Vaše bezpečné heslo pro správu.
-
-### WEDOS DNS Nastavení:
-U registrátora WEDOS v DNS správě domény `sermpelhrimov.cz` nastavte:
-- **CNAME:** `www` -> `cname.vercel-dns.com`
-- **A:** `@` -> `76.76.21.21`
+1. Otevřete repozitář `paddovo/serm-pelhrimov` na GitHubu.
+2. Klikněte na soubor, který chcete upravit (např. `o-nas.html`).
+3. Klikněte na ikonu tužky **Edit**.
+4. Upravte text a klikněte na **Commit changes**.
+5. Vercel automaticky nasadí změnu na produkční doménu `www.sermpelhrimov.cz`.
