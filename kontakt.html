@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt | Škola historického šermu Pelhřimov</title>
+  <meta name="description" content="Kontaktní údaje, e-mail, telefon, sociální sítě, adresa a mapa tréninků v Pelhřimovské sportovní hale.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico">
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased flex flex-col min-h-screen">
+
+  <header class="fixed top-0 left-0 right-0 z-40 bg-slate-950/95 backdrop-blur-md border-b border-amber-900/40 py-3">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="images/logo.png" alt="Škola historického šermu Pelhřimov" class="h-12 w-auto object-contain group-hover:scale-105 transition-transform">
+        <div class="flex flex-col">
+          <span class="font-bold text-lg tracking-wider text-amber-400 uppercase font-serif">ŠHŠ Pelhřimov</span>
+          <span class="text-[10px] text-slate-400 tracking-widest uppercase">Škola historického šermu</span>
+        </div>
+      </a>
+      <nav class="hidden xl:flex items-center gap-5">
+        <a href="index.html" class="text-xs font-semibold text-slate-300 hover:text-amber-400 uppercase">Úvod</a>
+        <a href="o-nas.html" class="text-xs font-semibold text-slate-300 hover:text-amber-400 uppercase">O nás</a>
+        <a href="kurzy.html" class="text-xs font-semibold text-slate-300 hover:text-amber-400 uppercase">Tréninky</a>
+        <a href="discipliny.html" class="text-xs font-semibold text-slate-300 hover:text-amber-400 uppercase">Disciplíny</a>
+        <a href="pro-zacatecniky.html" class="text-xs font-semibold text-slate-300 hover:text-amber-400 uppercase">Pro začátečníky</a>
+        <a href="galerie.html" class="text-xs font-semibold text-slate-300 hover:text-amber-400 uppercase">Galerie</a>
+        <a href="kalendar-akci.html" class="text-xs font-semibold text-slate-300 hover:text-amber-400 uppercase">Kalendář akcí</a>
+        <a href="kontakt.html" class="text-xs font-bold text-amber-400 uppercase">Kontakt</a>
+      </nav>
+      <button id="mobile-menu-toggle" class="xl:hidden text-slate-300 hover:text-amber-400 p-2">☰</button>
+    </div>
+  </header>
+
+  <main class="flex-grow pt-28 pb-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <div class="text-center space-y-4 max-w-3xl mx-auto">
+        <span class="text-amber-400 font-bold text-sm uppercase tracking-widest">Kde nás najdete</span>
+        <h1 class="text-3xl sm:text-5xl font-extrabold font-serif uppercase tracking-tight text-slate-100">Kontakt & Tréninky</h1>
+        <p class="text-slate-400 text-base">Máte dotaz k tréninkům nebo chcete přijít na první zkušební lekci? Neváhejte nás kontaktovat.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-slate-900 border border-slate-800 rounded-xl p-8 space-y-6">
+          <h2 class="text-xl font-bold font-serif text-slate-100 uppercase border-b border-slate-800 pb-3">Kontaktní údaje</h2>
+          <ul class="space-y-4 text-sm">
+            <li>
+              <span class="font-bold text-slate-200 block uppercase text-xs">Místo tréninků</span>
+              <span class="text-slate-300">Pelhřimovská sportovní hala, Nádražní ulice, Pelhřimov</span>
+            </li>
+            <li>
+              <span class="font-bold text-slate-200 block uppercase text-xs">E-mail</span>
+              <a href="mailto:info@sermpelhrimov.cz" class="text-amber-400 hover:underline">info@sermpelhrimov.cz</a>
+            </li>
+            <li>
+              <span class="font-bold text-slate-200 block uppercase text-xs">Telefon</span>
+              <a href="tel:+420123456789" class="text-amber-400 hover:underline">+420 123 456 789</a>
+            </li>
+          </ul>
+          <div class="pt-4 border-t border-slate-800">
+            <span class="font-bold text-slate-200 block uppercase text-xs mb-2">Sociální sítě</span>
+            <div class="flex gap-4">
+              <a href="https://www.facebook.com/shspelhrimov.cz" target="_blank" class="px-4 py-2 bg-slate-950 border border-slate-800 hover:border-amber-500 text-slate-300 hover:text-amber-400 rounded text-xs uppercase font-bold">Facebook</a>
+              <a href="https://www.instagram.com/shspelhrimov" target="_blank" class="px-4 py-2 bg-slate-950 border border-slate-800 hover:border-amber-500 text-slate-300 hover:text-amber-400 rounded text-xs uppercase font-bold">Instagram</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-slate-900 border border-slate-800 rounded-xl p-8 space-y-6 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="inline-block bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase px-3 py-1 rounded">🛡️ Záštita</div>
+            <h2 class="text-xl font-bold font-serif text-slate-100 uppercase">Škola historického šermu Pelhřimov</h2>
+            <p class="text-slate-300 text-sm leading-relaxed">Působíme v Pelhřimově. Naším cílem je výuka historických bojových umění s důrazem na techniku, sport a přátelskou komunitu.</p>
+            <p class="text-xs text-slate-400 leading-relaxed">Pracujeme v těsné součinnosti s mateřským projektem Aurinko Félag.</p>
+          </div>
+          <a href="https://www.aurinkofelag.cz" target="_blank" class="inline-block bg-slate-950 border border-amber-500/40 text-amber-400 font-bold px-5 py-3 rounded text-xs uppercase tracking-wider text-center">Navštívit www.aurinkofelag.cz ➔</a>
+        </div>
+      </div>
+
+      <div class="bg-slate-900 border border-slate-800 rounded-xl p-8 space-y-4">
+        <h2 class="text-xl font-bold font-serif text-slate-100 uppercase">Kde trénujeme: Pelhřimovská sportovní hala</h2>
+        <div class="w-full h-72 bg-slate-950 border border-slate-800 rounded-lg overflow-hidden relative">
+          <iframe title="Pelhřimovská sportovní hala Mapa" width="100%" height="100%" style="border:0; filter: invert(90%) hue-rotate(180deg);" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2611.5!2d15.22!3d49.43!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDnCsDI1JzQ4LjAiTiAxNcKwMTMnMTIuMCJF!5e0!3m2!1scs!2scz!4v1620000000000!5m2!1scs!2scz"></iframe>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-slate-950 border-t border-amber-900/30 text-slate-400 py-8 text-center text-xs">
+    <p>© 2025 Škola historického šermu Pelhřimov. Všechna práva vyhrazena.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
