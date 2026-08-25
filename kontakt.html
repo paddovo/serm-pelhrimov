@@ -3,92 +3,171 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kontakt | Škola historického šermu Pelhřimov</title>
-  <meta name="description" content="Kontaktní údaje, e-mail, telefon, sociální sítě, adresa a mapa tréninků v Pelhřimovské sportovní hale.">
+  <title>Kontakt & Přihláška na trénink | Škola historického šermu Pelhřimov</title>
+  <meta name="description" content="Kontaktujte Školu historického šermu Pelhřimov. Přihláška na prvotní trénink zdarma, adresa tělocvičny a mapa.">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="images/logo.png">
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans antialiased flex flex-col min-h-screen">
+<body class="bg-[#0c0c0e] text-slate-100 font-sans antialiased flex flex-col min-h-screen">
 
-  <header class="fixed top-0 left-0 right-0 z-40 bg-slate-950/95 backdrop-blur-md border-b border-amber-900/40 py-3">
+  <!-- HEADER / NAVIGATION -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#0c0c0e]/95 backdrop-blur-md border-b border-amber-500/20 py-3">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-3">
-        <img src="images/logo.png" alt="Škola historického šermu Pelhřimov" class="h-12 w-auto object-contain group-hover:scale-105 transition-transform">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <img src="images/logo.png" alt="Škola historického šermu Pelhřimov" class="h-11 w-auto object-contain group-hover:scale-105 transition-transform">
         <div class="flex flex-col">
-          <span class="font-bold text-lg tracking-wider text-amber-400 uppercase font-serif">ŠHŠ Pelhřimov</span>
-          <span class="text-[10px] text-slate-400 tracking-widest uppercase">Škola historického šermu</span>
+          <span class="font-bold text-base sm:text-lg tracking-wider text-amber-400 uppercase font-serif leading-none">ŠHŠ Pelhřimov</span>
+          <span class="text-[9px] text-slate-400 tracking-widest uppercase mt-0.5">Škola historického šermu</span>
         </div>
       </a>
-      <nav class="hidden xl:flex items-center gap-5">
-        <a href="index.html" class="text-xs font-semibold text-slate-300 hover:text-amber-400 uppercase">Úvod</a>
-        <a href="o-nas.html" class="text-xs font-semibold text-slate-300 hover:text-amber-400 uppercase">O nás</a>
-        <a href="kurzy.html" class="text-xs font-semibold text-slate-300 hover:text-amber-400 uppercase">Tréninky</a>
-        <a href="discipliny.html" class="text-xs font-semibold text-slate-300 hover:text-amber-400 uppercase">Disciplíny</a>
-        <a href="pro-zacatecniky.html" class="text-xs font-semibold text-slate-300 hover:text-amber-400 uppercase">Pro začátečníky</a>
-        <a href="galerie.html" class="text-xs font-semibold text-slate-300 hover:text-amber-400 uppercase">Galerie</a>
-        <a href="kalendar-akci.html" class="text-xs font-semibold text-slate-300 hover:text-amber-400 uppercase">Kalendář akcí</a>
-        <a href="kontakt.html" class="text-xs font-bold text-amber-400 uppercase">Kontakt</a>
+
+      <nav class="hidden md:flex items-center gap-6">
+        <a href="o-nas.html" class="text-xs font-semibold text-slate-300 hover:text-amber-400 uppercase tracking-widest">ŠKOLA</a>
+        <a href="kurzy.html" class="text-xs font-semibold text-slate-300 hover:text-amber-400 uppercase tracking-widest">TRÉNINKY</a>
+        <a href="discipliny.html" class="text-xs font-semibold text-slate-300 hover:text-amber-400 uppercase tracking-widest">ZBRANĚ</a>
+        <a href="galerie.html" class="text-xs font-semibold text-slate-300 hover:text-amber-400 uppercase tracking-widest">GALERIE</a>
+        <a href="kontakt.html" class="text-xs font-bold text-amber-400 uppercase tracking-widest">KONTAKT</a>
       </nav>
-      <button id="mobile-menu-toggle" class="xl:hidden text-slate-300 hover:text-amber-400 p-2">☰</button>
+
+      <div class="hidden md:flex items-center gap-4">
+        <a href="kontakt.html#prihlaska" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold px-5 py-2.5 rounded text-xs uppercase tracking-wider shadow-lg shadow-amber-500/20 transition-all">
+          CHCI ZAČÍT ➔
+        </a>
+      </div>
+
+      <button id="mobile-menu-toggle" class="md:hidden text-slate-300 hover:text-amber-400 p-2 text-xl">☰</button>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-drawer" class="hidden md:hidden bg-[#0c0c0e] border-b border-amber-500/20 px-6 pt-4 pb-6 space-y-4">
+      <a href="o-nas.html" class="block text-sm font-semibold text-slate-200 hover:text-amber-400 uppercase py-2 border-b border-slate-800">ŠKOLA</a>
+      <a href="kurzy.html" class="block text-sm font-semibold text-slate-200 hover:text-amber-400 uppercase py-2 border-b border-slate-800">TRÉNINKY</a>
+      <a href="discipliny.html" class="block text-sm font-semibold text-slate-200 hover:text-amber-400 uppercase py-2 border-b border-slate-800">ZBRANĚ</a>
+      <a href="galerie.html" class="block text-sm font-semibold text-slate-200 hover:text-amber-400 uppercase py-2 border-b border-slate-800">GALERIE</a>
+      <a href="kontakt.html" class="block text-sm font-bold text-amber-400 uppercase py-2 border-b border-slate-800">KONTAKT</a>
+      <a href="kontakt.html#prihlaska" class="block w-full text-center bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-3 rounded text-xs uppercase tracking-wider mt-4">CHCI ZAČÍT ➔</a>
     </div>
   </header>
 
-  <main class="flex-grow pt-28 pb-16">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+  <main class="flex-grow pt-28 pb-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+
+      <!-- HEADER TITLE -->
       <div class="text-center space-y-4 max-w-3xl mx-auto">
-        <span class="text-amber-400 font-bold text-sm uppercase tracking-widest">Kde nás najdete</span>
-        <h1 class="text-3xl sm:text-5xl font-extrabold font-serif uppercase tracking-tight text-slate-100">Kontakt & Tréninky</h1>
-        <p class="text-slate-400 text-base">Máte dotaz k tréninkům nebo chcete přijít na první zkušební lekci? Neváhejte nás kontaktovat.</p>
+        <span class="text-amber-400 font-bold text-xs uppercase tracking-widest">Kontakt & Přihláška</span>
+        <h1 class="text-4xl sm:text-5xl font-extrabold font-serif uppercase tracking-tight text-slate-100">Přijď si šerm vyzkoušet</h1>
+        <p class="text-slate-400 text-sm sm:text-base">Máš dotaz nebo si chceš domluvit první trénink? Napiš nám přes formulář níže nebo přijď rovnou na trénink.</p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="bg-slate-900 border border-slate-800 rounded-xl p-8 space-y-6">
-          <h2 class="text-xl font-bold font-serif text-slate-100 uppercase border-b border-slate-800 pb-3">Kontaktní údaje</h2>
-          <ul class="space-y-4 text-sm">
-            <li>
-              <span class="font-bold text-slate-200 block uppercase text-xs">Místo tréninků</span>
-              <span class="text-slate-300">Pelhřimovská sportovní hala, Nádražní ulice, Pelhřimov</span>
-            </li>
-            <li>
-              <span class="font-bold text-slate-200 block uppercase text-xs">E-mail</span>
-              <a href="mailto:info@sermpelhrimov.cz" class="text-amber-400 hover:underline">info@sermpelhrimov.cz</a>
-            </li>
-            <li>
-              <span class="font-bold text-slate-200 block uppercase text-xs">Telefon</span>
-              <a href="tel:+420123456789" class="text-amber-400 hover:underline">+420 123 456 789</a>
-            </li>
-          </ul>
-          <div class="pt-4 border-t border-slate-800">
-            <span class="font-bold text-slate-200 block uppercase text-xs mb-2">Sociální sítě</span>
-            <div class="flex gap-4">
-              <a href="https://www.facebook.com/shspelhrimov.cz" target="_blank" class="px-4 py-2 bg-slate-950 border border-slate-800 hover:border-amber-500 text-slate-300 hover:text-amber-400 rounded text-xs uppercase font-bold">Facebook</a>
-              <a href="https://www.instagram.com/shspelhrimov" target="_blank" class="px-4 py-2 bg-slate-950 border border-slate-800 hover:border-amber-500 text-slate-300 hover:text-amber-400 rounded text-xs uppercase font-bold">Instagram</a>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+
+        <!-- SINGLE REGISTRATION / CONTACT FORM -->
+        <div id="prihlaska" class="bg-[#141418] border border-slate-800 rounded-2xl p-8 space-y-6">
+          <div class="space-y-2">
+            <span class="text-amber-400 font-bold text-xs uppercase tracking-widest">První trénink zdarma</span>
+            <h2 class="text-2xl font-bold font-serif text-slate-100 uppercase">Chci přít na trénink</h2>
+            <p class="text-xs text-slate-400">Vyplň přihlášku a my pro tebe připravíme tréninkové vybavení.</p>
+          </div>
+
+          <div id="form-status" class="hidden p-4 rounded-lg text-xs font-bold"></div>
+
+          <!-- Note: Form action can be set to any Formspree/Web3Forms/Formsubmit endpoint URL -->
+          <form id="contact-form" action="" method="POST" class="space-y-4">
+            <div class="space-y-1.5">
+              <label for="contact-name" class="block text-xs font-bold uppercase tracking-wider text-slate-300">Jméno a Příjmení *</label>
+              <input type="text" id="contact-name" name="name" required placeholder="Jan Novák" class="w-full bg-[#0c0c0e] border border-slate-800 focus:border-amber-500 rounded-lg px-4 py-3 text-sm text-slate-100 placeholder-slate-600 focus:outline-none transition-colors">
+            </div>
+
+            <div class="space-y-1.5">
+              <label for="contact-email" class="block text-xs font-bold uppercase tracking-wider text-slate-300">E-mailová adresa *</label>
+              <input type="email" id="contact-email" name="email" required placeholder="jan.novak@example.cz" class="w-full bg-[#0c0c0e] border border-slate-800 focus:border-amber-500 rounded-lg px-4 py-3 text-sm text-slate-100 placeholder-slate-600 focus:outline-none transition-colors">
+            </div>
+
+            <div class="space-y-1.5">
+              <label for="contact-phone" class="block text-xs font-bold uppercase tracking-wider text-slate-300">Telefonní číslo (volitelné)</label>
+              <input type="tel" id="contact-phone" name="phone" placeholder="+420 ..." class="w-full bg-[#0c0c0e] border border-slate-800 focus:border-amber-500 rounded-lg px-4 py-3 text-sm text-slate-100 placeholder-slate-600 focus:outline-none transition-colors">
+            </div>
+
+            <div class="space-y-1.5">
+              <label for="contact-course" class="block text-xs font-bold uppercase tracking-wider text-slate-300">Zájem o trénink</label>
+              <select id="contact-course" name="course" class="w-full bg-[#0c0c0e] border border-slate-800 focus:border-amber-500 rounded-lg px-4 py-3 text-sm text-slate-100 focus:outline-none transition-colors">
+                <option value="Dlouhý meč - začátečníci">Dlouhý meč – Začátečníci (Pátek 20:30)</option>
+                <option value="Šerm tesákem">Šerm tesákem (Úterý 19:00)</option>
+                <option value="Dlouhý meč - pokročilí">Dlouhý meč – Pokročilí (Pátek 19:00)</option>
+                <option value="Obecný dotaz">Obecný dotaz</option>
+              </select>
+            </div>
+
+            <div class="space-y-1.5">
+              <label for="contact-message" class="block text-xs font-bold uppercase tracking-wider text-slate-300">Poznámka / Zpráva (volitelné)</label>
+              <textarea id="contact-message" name="message" rows="3" placeholder="Mám předchozí zkušenosti s..." class="w-full bg-[#0c0c0e] border border-slate-800 focus:border-amber-500 rounded-lg px-4 py-3 text-sm text-slate-100 placeholder-slate-600 focus:outline-none transition-colors"></textarea>
+            </div>
+
+            <button type="submit" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold py-4 rounded-lg text-xs uppercase tracking-wider shadow-lg shadow-amber-500/20 transition-all">
+              ODESLAT PŘIHLÁŠKU ➔
+            </button>
+          </form>
+        </div>
+
+        <!-- CONTACT DETAILS & LOCATION MAP -->
+        <div class="space-y-8">
+          <div class="bg-[#141418] border border-slate-800 rounded-2xl p-8 space-y-6">
+            <h2 class="text-xl font-serif font-bold text-slate-100 uppercase border-b border-slate-800 pb-3">Kontaktní informace</h2>
+
+            <div class="space-y-4 text-xs">
+              <div class="flex items-start gap-3">
+                <div class="w-8 h-8 rounded bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 shrink-0">📍</div>
+                <div>
+                  <strong class="text-slate-200 block text-sm">Místo tréninků</strong>
+                  <p class="text-slate-400 mt-0.5">Pelhřimovská sportovní hala<br>Nádražní ulice, Pelhřimov</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div class="w-8 h-8 rounded bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 shrink-0">✉️</div>
+                <div>
+                  <strong class="text-slate-200 block text-sm">Oficiální e-mail</strong>
+                  <p class="text-amber-400 mt-0.5">[Doplnit kontaktní e-mail školy]</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div class="w-8 h-8 rounded bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 shrink-0">🏛️</div>
+                <div>
+                  <strong class="text-slate-200 block text-sm">Záštita a propojení</strong>
+                  <p class="text-slate-400 mt-0.5">Škola historického šermu Pelhřimov pôsobí pod záštitou spolku Aurinko Félag.</p>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="bg-slate-900 border border-slate-800 rounded-xl p-8 space-y-6 flex flex-col justify-between">
-          <div class="space-y-4">
-            <div class="inline-block bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase px-3 py-1 rounded">🛡️ Záštita</div>
-            <h2 class="text-xl font-bold font-serif text-slate-100 uppercase">Škola historického šermu Pelhřimov</h2>
-            <p class="text-slate-300 text-sm leading-relaxed">Působíme v Pelhřimově. Naším cílem je výuka historických bojových umění s důrazem na techniku, sport a přátelskou komunitu.</p>
-            <p class="text-xs text-slate-400 leading-relaxed">Pracujeme v těsné součinnosti s mateřským projektem Aurinko Félag.</p>
+          <!-- TRAINING HOURS RECAP -->
+          <div class="bg-[#141418] border border-slate-800 rounded-2xl p-8 space-y-4">
+            <h3 class="text-lg font-serif font-bold text-slate-100 uppercase">Kdy trénujeme</h3>
+            <ul class="space-y-2 text-xs text-slate-300">
+              <li class="flex justify-between border-b border-slate-800 pb-2">
+                <span><strong>Úterý:</strong> Šerm tesákem</span>
+                <span class="text-amber-400 font-mono">19:00 – 20:00</span>
+              </li>
+              <li class="flex justify-between border-b border-slate-800 pb-2">
+                <span><strong>Pátek:</strong> Dlouhý meč (Pokročilí)</span>
+                <span class="text-amber-400 font-mono">19:00 – 20:30</span>
+              </li>
+              <li class="flex justify-between">
+                <span><strong>Pátek:</strong> Dlouhý meč (Začátečníci)</span>
+                <span class="text-amber-400 font-mono">20:30 – 21:30</span>
+              </li>
+            </ul>
           </div>
-          <a href="https://www.aurinkofelag.cz" target="_blank" class="inline-block bg-slate-950 border border-amber-500/40 text-amber-400 font-bold px-5 py-3 rounded text-xs uppercase tracking-wider text-center">Navštívit www.aurinkofelag.cz ➔</a>
         </div>
-      </div>
 
-      <div class="bg-slate-900 border border-slate-800 rounded-xl p-8 space-y-4">
-        <h2 class="text-xl font-bold font-serif text-slate-100 uppercase">Kde trénujeme: Pelhřimovská sportovní hala</h2>
-        <div class="w-full h-72 bg-slate-950 border border-slate-800 rounded-lg overflow-hidden relative">
-          <iframe title="Pelhřimovská sportovní hala Mapa" width="100%" height="100%" style="border:0; filter: invert(90%) hue-rotate(180deg);" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2611.5!2d15.22!3d49.43!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDnCsDI1JzQ4LjAiTiAxNcKwMTMnMTIuMCJF!5e0!3m2!1scs!2scz!4v1620000000000!5m2!1scs!2scz"></iframe>
-        </div>
       </div>
     </div>
   </main>
 
-  <footer class="bg-slate-950 border-t border-amber-900/30 text-slate-400 py-8 text-center text-xs">
-    <p>© 2025 Škola historického šermu Pelhřimov. Všechna práva vyhrazena.</p>
+  <!-- FOOTER -->
+  <footer class="bg-[#0c0c0e] border-t border-slate-800 text-slate-400 py-8 text-center text-xs">
+    <p>© 2025 Škola historického šermu Pelhřimov. sermpelhrimov.cz</p>
   </footer>
 
   <script src="js/main.js"></script>

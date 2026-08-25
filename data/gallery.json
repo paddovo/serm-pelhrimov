@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Nácvik krytů a vazeb mečem",
+    "caption": "Šerm s dlouhým mečem podle německé školy Liechtenauera v pelhřimovské sportovní hale.",
+    "category": "Tréninky",
+    "image": "images/logo.png",
+    "alt": "Nácvik krytů dlouhým mečem"
+  },
+  {
+    "id": 2,
+    "title": "Trénink jednoručním tesákem",
+    "caption": "Pohyb v distancii a rychlé seky zblízka s tesákem podle Lecküchnera.",
+    "category": "Disciplíny",
+    "image": "images/logo.png",
+    "alt": "Trénink tesákem"
+  },
+  {
+    "id": 3,
+    "title": "Základy zápasu Ringen",
+    "caption": "Boj zblízka, úchopy, strhy a stabilita postojů bez zbraně.",
+    "category": "Disciplíny",
+    "image": "images/logo.png",
+    "alt": "Boj zblízka Ringen"
+  },
+  {
+    "id": 4,
+    "title": "Víkendový HEMA seminář",
+    "caption": "Intenzivní rozbor historických manuskriptů a praktický nácvik taktiky.",
+    "category": "Semináře",
+    "image": "images/logo.png",
+    "alt": "Víkendový seminář HEMA"
+  },
+  {
+    "id": 5,
+    "title": "Sparring v chráničích a maskách",
+    "caption": "Kontrolované cvičné souboje s použitím bezpečnostního vybavení a masek.",
+    "category": "Tréninky",
+    "image": "images/logo.png",
+    "alt": "Sparring v maskách"
+  },
+  {
+    "id": 6,
+    "title": "Tým ŠHŠ Pelhřimov",
+    "caption": "Společná fotografie členů a instruktorů Školy historického šermu Pelhřimov.",
+    "category": "Akce",
+    "image": "images/logo.png",
+    "alt": "Tým Školy historického šermu Pelhřimov"
+  }
+]

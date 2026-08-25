@@ -5,34 +5,83 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Administrace | Škola historického šermu Pelhřimov</title>
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="../images/logo.png">
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans antialiased p-8">
+<body class="bg-[#0c0c0e] text-slate-100 font-sans antialiased min-h-screen flex items-center justify-center p-4">
 
-  <div id="admin-login-box" class="max-w-md mx-auto bg-slate-900 border border-slate-800 p-8 rounded-xl space-y-6">
-    <div class="text-center space-y-2">
-      <div class="text-3xl text-amber-400">🔒</div>
-      <h1 class="text-2xl font-bold font-serif text-slate-100 uppercase">Administrace ŠHŠ Pelhřimov</h1>
-      <p class="text-xs text-slate-400">Přístup pouze pro oprávněné trenéry a správce.</p>
-    </div>
-    <form id="admin-login-form" class="space-y-4">
+  <!-- LOGIN BOX -->
+  <div id="admin-login-box" class="max-w-md w-full bg-[#141418] border border-slate-800 rounded-2xl p-8 space-y-6">
+    <div class="flex items-center gap-3">
+      <img src="../images/logo.png" alt="ŠHŠ Pelhřimov" class="h-10 w-auto">
       <div>
-        <label class="block text-xs font-semibold text-slate-300 uppercase mb-1">Heslo správce</label>
-        <input type="password" id="admin-pass" required placeholder="Vložte heslo..." class="w-full bg-slate-950 border border-slate-800 rounded p-3 text-sm text-slate-100">
+        <h1 class="text-lg font-serif font-bold text-amber-400 uppercase">Administrace ŠHŠ</h1>
+        <p class="text-[10px] text-slate-400 uppercase tracking-widest">Přihlášení správce</p>
       </div>
-      <button type="submit" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-3 rounded text-xs uppercase">Vstoupit do správy</button>
+    </div>
+
+    <div id="admin-login-error" class="hidden p-3 bg-red-500/20 border border-red-500/30 text-red-400 text-xs rounded-lg font-semibold"></div>
+
+    <form id="admin-login-form" class="space-y-4">
+      <div class="space-y-1">
+        <label for="admin-pass" class="block text-xs font-bold uppercase tracking-wider text-slate-300">Heslo správce</label>
+        <input type="password" id="admin-pass" required placeholder="••••••••" class="w-full bg-[#0c0c0e] border border-slate-800 focus:border-amber-500 rounded-lg px-4 py-3 text-sm text-slate-100 focus:outline-none">
+      </div>
+      <button type="submit" class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold py-3 rounded-lg text-xs uppercase tracking-wider transition-all">
+        PŘIHLÁSIT SE ➔
+      </button>
     </form>
-    <div id="admin-login-error" class="hidden text-xs text-red-400 bg-red-500/10 border border-red-500/30 p-2.5 rounded text-center"></div>
   </div>
 
-  <div id="admin-dashboard" class="hidden max-w-6xl mx-auto space-y-8">
-    <div class="flex justify-between items-center border-b border-slate-800 pb-4">
-      <h1 class="text-2xl font-bold font-serif uppercase text-amber-400">🛡️ Dashboard správy</h1>
-      <button id="admin-logout-btn" class="bg-slate-900 border border-slate-800 text-xs text-slate-300 hover:text-red-400 px-4 py-2 rounded uppercase font-bold">Odhlásit se</button>
+  <!-- DASHBOARD PANEL (HIDDEN BY DEFAULT) -->
+  <div id="admin-dashboard" class="hidden max-w-4xl w-full bg-[#141418] border border-slate-800 rounded-2xl p-8 space-y-8">
+    <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+      <div class="flex items-center gap-3">
+        <img src="../images/logo.png" alt="ŠHŠ Pelhřimov" class="h-10 w-auto">
+        <h1 class="text-xl font-serif font-bold text-amber-400 uppercase">Správa obsahu webu</h1>
+      </div>
+      <button id="admin-logout-btn" class="text-xs bg-slate-900 border border-slate-700 hover:border-amber-500 text-slate-300 px-4 py-2 rounded-lg font-bold uppercase">
+        Odhlásit se
+      </button>
     </div>
 
-    <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 space-y-4">
-      <h2 class="text-lg font-bold font-serif uppercase text-slate-100">Správa rezervací & Akcí</h2>
-      <p class="text-xs text-slate-400">Všechna data jsou spravována v souboru <code class="text-amber-400">data/events.json</code> nebo přes administrátorské úložiště.</p>
+    <!-- GALLERY MANAGEMENT GUIDE -->
+    <div class="space-y-4">
+      <h2 class="text-lg font-serif font-bold text-slate-100 uppercase border-b border-slate-800 pb-2">Jak přidat nové fotografie do galerie</h2>
+      <p class="text-xs text-slate-300 leading-relaxed">
+        Web funguje jako čistý statický web bez databázového serveru. Správa fotografií probíhá prostřednictvím GitHub repository:
+      </p>
+
+      <ol class="space-y-3 text-xs text-slate-300 list-decimal pl-5">
+        <li>
+          <strong class="text-slate-100">Nahraj fotografii do repository:</strong>
+          <p class="text-slate-400 mt-0.5">Ulož nový obrázek (např. <code class="bg-[#0c0c0e] px-1.5 py-0.5 rounded text-amber-400">images/serm-01.jpg</code>) do složky <code class="bg-[#0c0c0e] px-1.5 py-0.5 rounded text-amber-400">images/</code> na GitHubu.</p>
+        </li>
+        <li>
+          <strong class="text-slate-100">Aktualizuj datový soubor galerie:</strong>
+          <p class="text-slate-400 mt-0.5">Otevři soubor <code class="bg-[#0c0c0e] px-1.5 py-0.5 rounded text-amber-400">data/gallery.json</code> a přidej nový záznam:</p>
+          <pre class="bg-[#0c0c0e] p-3 rounded-lg border border-slate-800 text-[11px] font-mono text-amber-300 overflow-x-auto mt-1">
+{
+  "id": 7,
+  "title": "Název fotky",
+  "caption": "Popis fotografie...",
+  "category": "Tréninky",
+  "image": "images/serm-01.jpg",
+  "alt": "Popis obrázku"
+}</pre>
+        </li>
+        <li>
+          <strong class="text-slate-100">Potvrď změny (Commit):</strong>
+          <p class="text-slate-400 mt-0.5">Po uložení změn Vercel během několika sekund automaticky nasadí novou verzi galerie na doménu <code class="text-amber-400">sermpelhrimov.cz</code>.</p>
+        </li>
+      </ol>
+    </div>
+
+    <!-- EVENTS MANAGEMENT GUIDE -->
+    <div class="space-y-4 border-t border-slate-800 pt-6">
+      <h2 class="text-lg font-serif font-bold text-slate-100 uppercase border-b border-slate-800 pb-2">Jak upravit kalendář akcí</h2>
+      <p class="text-xs text-slate-300 leading-relaxed">
+        Akce v kalendáři na stránce <code class="bg-[#0c0c0e] px-1.5 py-0.5 rounded text-amber-400">kalendar-akci.html</code> jsou načítány ze souboru <code class="bg-[#0c0c0e] px-1.5 py-0.5 rounded text-amber-400">data/events.json</code>. Úpravou tohoto souboru na GitHubu změníte zobrazené akce.
+      </p>
     </div>
   </div>
 
