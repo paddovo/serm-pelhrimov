@@ -2,18 +2,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  --bg-dark: #0c0c0e;
-  --bg-card: #141418;
+  --bg-dark: #0f1015;
+  --bg-card: #181a22;
+  --bg-card-hover: #1f222d;
   --amber-gold: #d4af37;
   --amber-gold-light: #f3e5ab;
+  --steel-accent: #38bdf8;
 }
 
 body {
   background-color: var(--bg-dark);
-  color: #f1f5f9;
+  color: #f8fafc;
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   margin: 0;
   padding: 0;
+  /* Dynamic subtle blade / mesh texture background */
+  background-image:
+    radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.08) 0%, transparent 60%),
+    linear-gradient(135deg, rgba(15, 16, 21, 0.98) 0%, rgba(24, 26, 34, 0.95) 100%),
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.01) 0px, rgba(255, 255, 255, 0.01) 1px, transparent 1px, transparent 10px);
+  background-attachment: fixed;
+}
+
+/* Form input black high contrast text */
+input, textarea, select {
+  color: #111827 !important;
+  background-color: #f8fafc !important;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #6b7280 !important;
 }
 
 h1, h2, h3, .font-serif {
@@ -25,7 +43,7 @@ h1, h2, h3, .font-serif {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #0c0c0e;
+  background: #0f1015;
 }
 ::-webkit-scrollbar-thumb {
   background: #997a15;
@@ -33,6 +51,20 @@ h1, h2, h3, .font-serif {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #d4af37;
+}
+
+/* Dynamic martial accent lines */
+.blade-line {
+  position: relative;
+}
+.blade-line::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, #d4af37 0%, transparent 100%);
 }
 
 .brand-gold-text {
@@ -43,7 +75,6 @@ h1, h2, h3, .font-serif {
   border: 1px solid rgba(212, 175, 55, 0.25);
 }
 
-/* Image reveal / Smooth Transitions */
 .transition-smooth {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }

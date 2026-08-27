@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>O nás | Škola historického šermu Pelhřimov</title>
-  <meta name="description" content="O Škole historického šermu Pelhřimov. Výuka evropských bojových umění (HEMA), historie školy a přístup k tréninku.">
+  <title>O nás & Lektori | Škola historického šermu Pelhřimov</title>
+  <meta name="description" content="O Škole historického šermu Pelhřimov, naši lektori a instruktoři, výuka evropských bojových umění (HEMA).">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="images/logo.png">
 </head>
-<body class="bg-[#0c0c0e] text-slate-100 font-sans antialiased flex flex-col min-h-screen">
+<body class="bg-[#0f1015] text-slate-100 font-sans antialiased flex flex-col min-h-screen">
 
   <!-- HEADER / NAVIGATION -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-[#0c0c0e]/95 backdrop-blur-md border-b border-amber-500/20 py-3">
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#0f1015]/95 backdrop-blur-md border-b border-amber-500/20 py-3">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-3 group">
         <img src="images/logo.png" alt="Škola historického šermu Pelhřimov" class="h-11 w-auto object-contain group-hover:scale-105 transition-transform">
@@ -31,7 +31,7 @@
 
       <div class="hidden md:flex items-center gap-4">
         <a href="kontakt.html" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold px-5 py-2.5 rounded text-xs uppercase tracking-wider shadow-lg shadow-amber-500/20 transition-all">
-          CHCI ZAČÍT ➔
+          KONTAKT ➔
         </a>
       </div>
 
@@ -39,13 +39,13 @@
     </div>
 
     <!-- Mobile Drawer -->
-    <div id="mobile-drawer" class="hidden md:hidden bg-[#0c0c0e] border-b border-amber-500/20 px-6 pt-4 pb-6 space-y-4">
+    <div id="mobile-drawer" class="hidden md:hidden bg-[#0f1015] border-b border-amber-500/20 px-6 pt-4 pb-6 space-y-4">
       <a href="o-nas.html" class="block text-sm font-bold text-amber-400 uppercase py-2 border-b border-slate-800">ŠKOLA</a>
       <a href="kurzy.html" class="block text-sm font-semibold text-slate-200 hover:text-amber-400 uppercase py-2 border-b border-slate-800">TRÉNINKY</a>
       <a href="discipliny.html" class="block text-sm font-semibold text-slate-200 hover:text-amber-400 uppercase py-2 border-b border-slate-800">ZBRANĚ</a>
       <a href="galerie.html" class="block text-sm font-semibold text-slate-200 hover:text-amber-400 uppercase py-2 border-b border-slate-800">GALERIE</a>
       <a href="kontakt.html" class="block text-sm font-semibold text-slate-200 hover:text-amber-400 uppercase py-2 border-b border-slate-800">KONTAKT</a>
-      <a href="kontakt.html" class="block w-full text-center bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-3 rounded text-xs uppercase tracking-wider mt-4">CHCI ZAČÍT ➔</a>
+      <a href="kontakt.html" class="block w-full text-center bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-3 rounded text-xs uppercase tracking-wider mt-4">KONTAKT ➔</a>
     </div>
   </header>
 
@@ -55,10 +55,11 @@
       <div class="text-center space-y-4 max-w-3xl mx-auto">
         <span class="text-amber-400 font-bold text-xs uppercase tracking-widest">O naší škole</span>
         <h1 class="text-4xl sm:text-5xl font-extrabold font-serif uppercase tracking-tight text-slate-100">Bojové umění s duší a historickými kořeny</h1>
-        <p class="text-slate-400 text-sm sm:text-base">Škola historického šermu Pelhřimov je komunitní klub věnující se studiu a rekonstrukci evropských bojových umění (HEMA).</p>
+        <p class="text-slate-300 text-sm sm:text-base">Škola historického šermu Pelhřimov je komunitní klub věnující se studiu a rekonstrukci evropských bojových umění (HEMA).</p>
       </div>
 
-      <div class="bg-[#141418] border border-slate-800 rounded-2xl p-8 md:p-12 space-y-6">
+      <!-- SCHOOL PHILOSOPHY -->
+      <div class="bg-[#181a22] border border-slate-800 rounded-2xl p-8 md:p-12 space-y-6">
         <h2 class="text-2xl font-serif font-bold text-slate-100 uppercase border-b border-slate-800 pb-3">Naše filozofie</h2>
         <p class="text-slate-300 text-sm leading-relaxed">
           Nehrajeme divadlo ani nenacvičujeme scénické souboje pro film. Vyučujeme reálné bojové umění, jak se dochovalo v historických rukopisech a bojových manuálech (Fechtbuch) německé a italské tradice 14. až 16. století.
@@ -68,17 +69,46 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="bg-[#141418] border border-slate-800 p-8 rounded-2xl space-y-3">
-          <span class="text-amber-400 font-bold text-xs uppercase tracking-widest">Historie</span>
-          <h3 class="text-xl font-serif font-bold text-slate-100 uppercase">Prameny a manuály</h3>
-          <p class="text-xs text-slate-400 leading-relaxed">Studujeme traktáty mistrů jako Johannes Liechtenauer, Hans Lecküchner či Fiore dei Liberi. Převádíme historické texty a nákresy do praktického pohybu v tělocvičně.</p>
+      <!-- INSTRUCTORS / LEKTORI SECTION -->
+      <div id="lektori" class="space-y-8 pt-4">
+        <div class="text-center space-y-2">
+          <span class="text-amber-400 font-bold text-xs uppercase tracking-widest">Vedení tréninků</span>
+          <h2 class="text-3xl font-serif font-bold text-slate-100 uppercase">Naši lektori a instruktoři</h2>
+          <p class="text-slate-300 text-xs sm:text-sm">Zkušení trenéři s dlouholetou praxí v evropských bojových uměních.</p>
         </div>
 
-        <div class="bg-[#141418] border border-slate-800 p-8 rounded-2xl space-y-3">
-          <span class="text-amber-400 font-bold text-xs uppercase tracking-widest">Sport</span>
-          <h3 class="text-xl font-serif font-bold text-slate-100 uppercase">Moderní trénink</h3>
-          <p class="text-xs text-slate-400 leading-relaxed">Používáme špičkové moderní ochranné pomůcky, cvičné federy a bezpečnou metodiku tak, aby trénink přinášel radost z pohybu bez zbytečného rizika zranění.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- LEKTOR 1 -->
+          <div class="bg-[#181a22] border border-slate-800 hover:border-amber-500/40 rounded-2xl p-8 space-y-4 transition-all">
+            <div class="flex items-center gap-4">
+              <div class="w-16 h-16 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-2xl font-serif font-bold shrink-0">
+                🗡️
+              </div>
+              <div>
+                <h3 class="text-xl font-serif font-bold text-slate-100 uppercase">[Jméno Hlavního Lektora]</h3>
+                <span class="text-xs text-amber-400 font-bold uppercase tracking-wider block">Hlavní instruktor – Dlouhý meč</span>
+              </div>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Věnuje se rekonstrukci německé šermířské školy Liechtenauera. Zaměřuje se na metodiku výuky začátečníků, biomechaniku seků a biomechanickou bezpečnost při sparringu.
+            </p>
+          </div>
+
+          <!-- LEKTOR 2 -->
+          <div class="bg-[#181a22] border border-slate-800 hover:border-amber-500/40 rounded-2xl p-8 space-y-4 transition-all">
+            <div class="flex items-center gap-4">
+              <div class="w-16 h-16 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-2xl font-serif font-bold shrink-0">
+                ⚔️
+              </div>
+              <div>
+                <h3 class="text-xl font-serif font-bold text-slate-100 uppercase">[Jméno Lektora Tesáku]</h3>
+                <span class="text-xs text-amber-400 font-bold uppercase tracking-wider block">Instruktor – Tesák & Ringen</span>
+              </div>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Specialista na jednoruční tesák podle Lecküchnera a historický zápas Ringen. Vyučuje prácu s distancí, rychlost reakce a taktické rozhodování v boji zblízka.
+            </p>
+          </div>
         </div>
       </div>
 
@@ -86,7 +116,7 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="bg-[#0c0c0e] border-t border-slate-800 text-slate-400 py-8 text-center text-xs">
+  <footer class="bg-[#0f1015] border-t border-slate-800 text-slate-400 py-8 text-center text-xs">
     <p>© 2025 Škola historického šermu Pelhřimov. sermpelhrimov.cz</p>
   </footer>
 
