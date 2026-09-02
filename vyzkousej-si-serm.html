@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="cs" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vyzkoušej si historický šerm | Škola historického šermu Pelhřimov</title>
+  <meta name="description" content="Chceš si vyzkoušet historický šerm? Škola historického šermu Pelhřimov přijímá děti i dospělé začátečníky. Přijď si šerm nezávazně vyzkoušet.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico">
+</head>
+<body class="bg-[#0f1015] text-slate-100 font-sans antialiased flex flex-col min-h-screen">
+
+  <!-- HEADER / NAVIGATION -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#0f1015]/95 backdrop-blur-md border-b border-amber-500/20 py-3">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <img src="images/logo.png" alt="Škola historického šermu Pelhřimov" class="h-11 w-auto object-contain group-hover:scale-105 transition-transform">
+        <div class="flex flex-col">
+          <span class="font-bold text-base sm:text-lg tracking-wider text-amber-400 uppercase font-serif leading-none">ŠHŠ Pelhřimov</span>
+          <span class="text-[9px] text-slate-400 tracking-widest uppercase mt-0.5">Škola historického šermu</span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6">
+        <a href="index.html" class="text-xs font-semibold text-slate-300 hover:text-amber-400 uppercase tracking-widest">← ZPĚT NA WEBU</a>
+        <a href="o-nas.html" class="text-xs font-semibold text-slate-300 hover:text-amber-400 uppercase tracking-widest">ŠKOLA</a>
+        <a href="kurzy.html" class="text-xs font-semibold text-slate-300 hover:text-amber-400 uppercase tracking-widest">TRÉNINKY</a>
+        <a href="kontakt.html" class="text-xs font-semibold text-slate-300 hover:text-amber-400 uppercase tracking-widest">KONTAKT</a>
+      </nav>
+
+      <div class="hidden md:flex items-center gap-4">
+        <a href="#nabor-formular" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold px-5 py-2.5 rounded text-xs uppercase tracking-wider shadow-lg shadow-amber-500/20 transition-all">
+          ⚔️ VYZKOUŠET ŠERM
+        </a>
+      </div>
+
+      <button id="mobile-menu-toggle" class="md:hidden text-slate-300 hover:text-amber-400 p-2 text-xl" aria-label="Otevřít menu">☰</button>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-drawer" class="hidden md:hidden bg-[#0f1015] border-b border-amber-500/20 px-6 pt-4 pb-6 space-y-4">
+      <a href="index.html" class="block text-sm font-bold text-amber-400 uppercase py-2 border-b border-slate-800">← Zpět na www.sermpelhrimov.cz</a>
+      <a href="o-nas.html" class="block text-sm font-semibold text-slate-200 hover:text-amber-400 uppercase py-2 border-b border-slate-800">ŠKOLA</a>
+      <a href="kurzy.html" class="block text-sm font-semibold text-slate-200 hover:text-amber-400 uppercase py-2 border-b border-slate-800">TRÉNINKY</a>
+      <a href="kontakt.html" class="block text-sm font-semibold text-slate-200 hover:text-amber-400 uppercase py-2 border-b border-slate-800">KONTAKT</a>
+      <a href="#nabor-formular" class="block w-full text-center bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold py-3 rounded text-xs uppercase tracking-wider mt-4">⚔️ CHCI SI ŠERM VYZKOUŠET</a>
+    </div>
+  </header>
+
+  <main class="flex-grow pt-24">
+
+    <!-- HERO SECTION -->
+    <section class="relative py-16 sm:py-24 bg-gradient-to-b from-[#181a22] via-[#0f1015] to-[#0f1015] overflow-hidden border-b border-amber-500/20">
+      <div class="absolute inset-0 opacity-15 pointer-events-none bg-[radial-gradient(#d4af37_1px,transparent_1px)] [background-size:24px_24px]"></div>
+
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center relative z-10 space-y-6">
+        <div class="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/30 px-4 py-1.5 rounded-full text-amber-400 text-xs sm:text-sm font-semibold uppercase tracking-wider">
+          <span> Den sportovních spolků – Pelhřimov 2026</span>
+        </div>
+
+        <h1 class="text-4xl sm:text-6xl font-extrabold font-serif uppercase tracking-tight text-slate-100 leading-tight">
+          VYZKOUŠEJ SI <span class="text-amber-400 block sm:inline">HISTORICKÝ ŠERM</span>
+        </h1>
+
+        <p class="text-xl sm:text-2xl font-serif text-slate-200 font-medium">
+          Nikdy jsi nedržel meč? Nevadí. Začni od nuly.
+        </p>
+
+        <p class="text-base sm:text-lg text-slate-400">
+          Děti i dospělí. Začátečníci vítáni.
+        </p>
+
+        <div class="pt-4">
+          <a href="#nabor-formular" class="inline-block bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-base sm:text-lg px-8 py-4 rounded-xl shadow-xl shadow-amber-500/25 transition-all transform hover:-translate-y-0.5 active:translate-y-0 uppercase tracking-wider">
+            ⚔️ CHCI SI ŠERM VYZKOUŠET
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CO TĚ ČEKÁ (4 BLOCKS) -->
+    <section class="py-16 bg-[#0f1015] border-b border-slate-800/80">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+        <div class="text-center space-y-2">
+          <span class="text-amber-400 font-bold text-xs uppercase tracking-widest">Co tě čeká</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold font-serif uppercase tracking-tight text-slate-100">První krok do světa HEMA</h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- BLOCK 1 -->
+          <div class="bg-[#181a22] border border-slate-800 rounded-2xl p-6 text-center space-y-3 hover:border-amber-500/40 transition-colors">
+            <div class="w-14 h-14 mx-auto rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-3xl">
+              ⚔️
+            </div>
+            <h3 class="text-xl font-bold font-serif text-amber-400 uppercase">POSTOJ</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Naučíš se správný základní postoj.
+            </p>
+          </div>
+
+          <!-- BLOCK 2 -->
+          <div class="bg-[#181a22] border border-slate-800 rounded-2xl p-6 text-center space-y-3 hover:border-amber-500/40 transition-colors">
+            <div class="w-14 h-14 mx-auto rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-3xl">
+              🗡️
+            </div>
+            <h3 class="text-xl font-bold font-serif text-amber-400 uppercase">ÚTOK</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Vyzkoušíš si základní údery a techniky.
+            </p>
+          </div>
+
+          <!-- BLOCK 3 -->
+          <div class="bg-[#181a22] border border-slate-800 rounded-2xl p-6 text-center space-y-3 hover:border-amber-500/40 transition-colors">
+            <div class="w-14 h-14 mx-auto rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-3xl">
+              🛡️
+            </div>
+            <h3 class="text-xl font-bold font-serif text-amber-400 uppercase">KRYT</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Zjistíš, jak se proti útoku bránit.
+            </p>
+          </div>
+
+          <!-- BLOCK 4 -->
+          <div class="bg-[#181a22] border border-slate-800 rounded-2xl p-6 text-center space-y-3 hover:border-amber-500/40 transition-colors">
+            <div class="w-14 h-14 mx-auto rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-3xl">
+              ⚔️
+            </div>
+            <h3 class="text-xl font-bold font-serif text-amber-400 uppercase">SOUBOJ</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Nakonec si vyzkoušíš krátký bezpečný souboj.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRO KOHO JE ŠERM -->
+    <section class="py-16 bg-[#12141c] border-b border-slate-800/80">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-8">
+        <div class="space-y-2">
+          <span class="text-amber-400 font-bold text-xs uppercase tracking-widest">Komu je určeno</span>
+          <h2 class="text-3xl sm:text-5xl font-extrabold font-serif uppercase tracking-tight text-slate-100">JE TO PRO TEBE?</h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left max-w-2xl mx-auto">
+          <div class="bg-[#181a22] p-4 rounded-xl border border-slate-800/80 flex items-center gap-3">
+            <span class="text-amber-400 font-bold">✓</span>
+            <span class="text-slate-200 font-medium">Pro děti.</span>
+          </div>
+          <div class="bg-[#181a22] p-4 rounded-xl border border-slate-800/80 flex items-center gap-3">
+            <span class="text-amber-400 font-bold">✓</span>
+            <span class="text-slate-200 font-medium">Pro dospělé.</span>
+          </div>
+          <div class="bg-[#181a22] p-4 rounded-xl border border-slate-800/80 flex items-center gap-3">
+            <span class="text-amber-400 font-bold">✓</span>
+            <span class="text-slate-200 font-medium">Pro úplné začátečníky.</span>
+          </div>
+          <div class="bg-[#181a22] p-4 rounded-xl border border-slate-800/80 flex items-center gap-3">
+            <span class="text-amber-400 font-bold">✓</span>
+            <span class="text-slate-200 font-medium">Pro lidi, kteří chtějí nový sport.</span>
+          </div>
+          <div class="bg-[#181a22] p-4 rounded-xl border border-slate-800/80 flex items-center gap-3">
+            <span class="text-amber-400 font-bold">✓</span>
+            <span class="text-slate-200 font-medium">Pro ty, které baví historie.</span>
+          </div>
+          <div class="bg-[#181a22] p-4 rounded-xl border border-slate-800/80 flex items-center gap-3">
+            <span class="text-amber-400 font-bold">✓</span>
+            <span class="text-slate-200 font-medium">Pro ty, kteří chtějí něco opravdu vyzkoušet.</span>
+          </div>
+        </div>
+
+        <div class="bg-amber-500/10 border border-amber-500/30 rounded-2xl p-6 max-w-2xl mx-auto">
+          <p class="text-amber-300 font-bold text-base sm:text-lg">
+            Nemusíš být silný. Nemusíš mít zkušenosti. Nemusíš mít vlastní vybavení.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CO SI MÁŠ PŘINÉST -->
+    <section class="py-16 bg-[#0f1015] border-b border-slate-800/80">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-8">
+        <div class="space-y-2">
+          <span class="text-amber-400 font-bold text-xs uppercase tracking-widest">Příprava</span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold font-serif uppercase tracking-tight text-slate-100">NA PRVNÍ TRÉNINK TI STAČÍ:</h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
+          <div class="bg-[#181a22] border border-slate-800 p-6 rounded-2xl text-center space-y-2">
+            <div class="text-3xl mb-2">👟</div>
+            <strong class="text-slate-100 block font-serif">Sportovní oblečení</strong>
+            <p class="text-xs text-slate-400">Pohodlné tričko a tepláky nebo kraťasy</p>
+          </div>
+
+          <div class="bg-[#181a22] border border-slate-800 p-6 rounded-2xl text-center space-y-2">
+            <div class="text-3xl mb-2">👟</div>
+            <strong class="text-slate-100 block font-serif">Sportovní obuv</strong>
+            <p class="text-xs text-slate-400">Čistá sálová obuv do tělocvičny</p>
+          </div>
+
+          <div class="bg-[#181a22] border border-slate-800 p-6 rounded-2xl text-center space-y-2">
+            <div class="text-3xl mb-2">🔥</div>
+            <strong class="text-slate-100 block font-serif">Chuť to vyzkoušet</strong>
+            <p class="text-xs text-slate-400">Dobrá nálada a zájem o nový zážitek</p>
+          </div>
+        </div>
+
+        <p class="text-slate-300 text-sm font-semibold max-w-xl mx-auto bg-[#181a22] py-3 px-6 rounded-xl border border-slate-800">
+          💡 Zbytek ti zapůjčíme / vysvětlíme na místě.
+        </p>
+      </div>
+    </section>
+
+    <!-- NÁBOROVÝ FORMULÁŘ -->
+    <section id="nabor-formular" class="py-16 bg-gradient-to-b from-[#181a22] to-[#0f1015] border-b border-amber-500/20">
+      <div class="max-w-2xl mx-auto px-4 sm:px-6 space-y-8">
+
+        <div class="text-center space-y-3">
+          <span class="text-amber-400 font-bold text-xs uppercase tracking-widest">Registrační formulář</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold font-serif uppercase tracking-tight text-slate-100">
+            CHCI SI PŘIJÍT ŠERM VYZKOUŠET
+          </h2>
+          <p class="text-slate-300 text-sm">
+            Vyplň krátký formulář a ozveme se ti s informacemi k prvnímu tréninku.
+          </p>
+        </div>
+
+        <form id="recruitment-form" class="bg-[#181a22] border border-amber-500/30 rounded-2xl p-6 sm:p-8 space-y-6 shadow-2xl shadow-amber-500/5">
+
+          <!-- NAME -->
+          <div class="space-y-2">
+            <label for="form-jmeno" class="block text-sm font-bold text-slate-200 uppercase tracking-wider">Jméno *</label>
+            <input type="text" id="form-jmeno" name="jmeno" required placeholder="Tvoje jméno a příjmení"
+              class="w-full bg-[#0f1015] border border-slate-700 rounded-xl px-4 py-3 text-slate-100 focus:outline-none focus:border-amber-400 transition-colors text-base">
+          </div>
+
+          <!-- AGE -->
+          <div class="space-y-2">
+            <label for="form-vek" class="block text-sm font-bold text-slate-200 uppercase tracking-wider">Věk *</label>
+            <input type="number" id="form-vek" name="vek" min="6" max="99" required placeholder="Napiš svůj věk (např. 14 nebo 32)"
+              class="w-full bg-[#0f1015] border border-slate-700 rounded-xl px-4 py-3 text-slate-100 focus:outline-none focus:border-amber-400 transition-colors text-base">
+          </div>
+
+          <!-- CONTACT -->
+          <div class="space-y-2">
+            <label for="form-kontakt" class="block text-sm font-bold text-slate-200 uppercase tracking-wider">E-mail nebo telefon *</label>
+            <input type="text" id="form-kontakt" name="kontakt" required placeholder="např. email@domena.cz nebo +420 777 123 456"
+              class="w-full bg-[#0f1015] border border-slate-700 rounded-xl px-4 py-3 text-slate-100 focus:outline-none focus:border-amber-400 transition-colors text-base">
+          </div>
+
+          <!-- INTEREST -->
+          <div class="space-y-3">
+            <label class="block text-sm font-bold text-slate-200 uppercase tracking-wider">Mám zájem o: *</label>
+
+            <div class="space-y-2.5">
+              <label class="flex items-center gap-3 bg-[#0f1015] p-3.5 rounded-xl border border-slate-800 cursor-pointer hover:border-amber-500/50 transition-colors">
+                <input type="radio" name="zajem" value="Dlouhý meč" checked class="w-5 h-5 accent-amber-500">
+                <span class="text-sm font-medium text-slate-200">Dlouhý meč</span>
+              </label>
+
+              <label class="flex items-center gap-3 bg-[#0f1015] p-3.5 rounded-xl border border-slate-800 cursor-pointer hover:border-amber-500/50 transition-colors">
+                <input type="radio" name="zajem" value="Tesák" class="w-5 h-5 accent-amber-500">
+                <span class="text-sm font-medium text-slate-200">Tesák</span>
+              </label>
+
+              <label class="flex items-center gap-3 bg-[#0f1015] p-3.5 rounded-xl border border-slate-800 cursor-pointer hover:border-amber-500/50 transition-colors">
+                <input type="radio" name="zajem" value="Obojí" class="w-5 h-5 accent-amber-500">
+                <span class="text-sm font-medium text-slate-200">Obojí</span>
+              </label>
+
+              <label class="flex items-center gap-3 bg-[#0f1015] p-3.5 rounded-xl border border-slate-800 cursor-pointer hover:border-amber-500/50 transition-colors">
+                <input type="radio" name="zajem" value="Nevím – chci si šerm nejdřív vyzkoušet" class="w-5 h-5 accent-amber-500">
+                <span class="text-sm font-medium text-slate-200">Nevím – chci si šerm nejdřív vyzkoušet</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- SUBMIT BUTTON -->
+          <div class="pt-2">
+            <button type="submit" id="form-submit-btn"
+              class="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-base sm:text-lg py-4 px-6 rounded-xl shadow-lg shadow-amber-500/20 transition-all uppercase tracking-wider">
+              ⚔️ CHCI PŘIJÍT NA TRÉNINK
+            </button>
+          </div>
+
+          <div id="form-status" class="hidden text-center p-4 rounded-xl text-sm font-semibold"></div>
+        </form>
+
+      </div>
+    </section>
+
+    <!-- TRÉNINKY -->
+    <section class="py-16 bg-[#0f1015] border-b border-slate-800/80">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-10">
+
+        <div class="text-center space-y-2">
+          <span class="text-amber-400 font-bold text-xs uppercase tracking-widest">Harmonogram</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold font-serif uppercase tracking-tight text-slate-100">
+            Tréninky
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          <!-- TUESDAY -->
+          <div class="bg-[#181a22] border border-slate-800 p-6 rounded-2xl space-y-4">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+              <h3 class="text-2xl font-bold font-serif text-amber-400 uppercase">ÚTERÝ</h3>
+              <span class="text-xs bg-slate-800 text-slate-300 px-3 py-1 rounded-full font-mono">Tělocvična</span>
+            </div>
+            <div class="space-y-2">
+              <div class="flex justify-between items-center text-sm">
+                <span class="font-bold text-slate-100">Šerm tesákem</span>
+                <span class="font-mono text-amber-400 font-bold">19:00–20:00</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- FRIDAY -->
+          <div class="bg-[#181a22] border border-slate-800 p-6 rounded-2xl space-y-4">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+              <h3 class="text-2xl font-bold font-serif text-amber-400 uppercase">PÁTEK</h3>
+              <span class="text-xs bg-slate-800 text-slate-300 px-3 py-1 rounded-full font-mono">Tělocvična</span>
+            </div>
+            <div class="space-y-3">
+              <div class="flex justify-between items-center text-sm border-b border-slate-800/50 pb-2">
+                <span class="text-slate-300">Šerm dlouhým mečem – mírně pokročilí</span>
+                <span class="font-mono text-slate-300">19:00–20:30</span>
+              </div>
+              <div class="flex justify-between items-center text-sm bg-amber-500/10 p-2.5 rounded-lg border border-amber-500/30">
+                <span class="font-bold text-amber-300">Šerm dlouhým mečem – začátečníci</span>
+                <span class="font-mono text-amber-400 font-bold">20:30–21:30</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- HIGHLIGHT BOX -->
+        <div class="bg-gradient-to-r from-amber-500/20 via-amber-500/10 to-amber-500/20 border border-amber-500/40 p-6 rounded-2xl text-center space-y-2">
+          <span class="text-xs text-amber-400 font-extrabold uppercase tracking-widest block">Náborový trénink</span>
+          <h3 class="text-2xl sm:text-3xl font-black font-serif text-slate-100 uppercase">ZAČÍNÁŠ OD NULY?</h3>
+          <p class="text-xl font-bold text-amber-400 font-mono">Pátek 20:30–21:30</p>
+          <p class="text-xs text-slate-300 mt-2">Doporučený čas pro tvůj první trénink s dlouhým mečem.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PRVNÍ TRÉNINK NEZÁVAZNĚ -->
+    <section class="py-16 bg-[#12141c] border-b border-amber-500/20">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-6">
+        <h2 class="text-3xl sm:text-5xl font-extrabold font-serif uppercase tracking-tight text-slate-100">
+          PRVNÍ TRÉNINK SI MŮŽEŠ VYZKOUŠET NEZÁVAZNĚ
+        </h2>
+        <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto">
+          Přijď se podívat, vyzkoušej si základní techniky a zjisti, jestli je historický šerm právě pro tebe.
+        </p>
+        <div class="pt-4">
+          <a href="#nabor-formular" class="inline-block bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-base sm:text-lg px-8 py-4 rounded-xl shadow-xl shadow-amber-500/25 transition-all uppercase tracking-wider">
+            CHCI SI ŠERM VYZKOUŠET
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- BACK LINK SECTION -->
+    <section class="py-10 bg-[#0f1015] text-center">
+      <div class="max-w-xl mx-auto px-4">
+        <a href="index.html" class="inline-flex items-center gap-2 border border-slate-700 hover:border-amber-400 text-slate-300 hover:text-amber-400 font-bold px-6 py-3 rounded-xl text-sm transition-all uppercase tracking-wider">
+          ← Zpět na www.sermpelhrimov.cz
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#0f1015] border-t border-slate-800 text-slate-400 py-8 text-center text-xs">
+    <div class="max-w-7xl mx-auto px-4 space-y-2">
+      <p>© 2026 Škola historického šermu Pelhřimov. Všechna práva vyhrazena.</p>
+      <p><a href="index.html" class="hover:text-amber-400">www.sermpelhrimov.cz</a> | <a href="ochrana-osobnich-udaju.html" class="hover:text-amber-400">Ochrana osobních údajů</a></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('recruitment-form');
+      const statusDiv = document.getElementById('form-status');
+      const submitBtn = document.getElementById('form-submit-btn');
+
+      if (!form) return;
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const jmeno = document.getElementById('form-jmeno').value.trim();
+        const vek = document.getElementById('form-vek').value.trim();
+        const kontakt = document.getElementById('form-kontakt').value.trim();
+        const zajem = form.elements['zajem'].value;
+
+        if (!jmeno || !vek || !kontakt) {
+          statusDiv.className = "text-center p-4 rounded-xl text-sm font-semibold bg-red-950/80 border border-red-500 text-red-200 mt-4";
+          statusDiv.innerHTML = "⚠️ Vyplňte prosím všechna povinná pole.";
+          statusDiv.classList.remove('hidden');
+          return;
+        }
+
+        submitBtn.disabled = true;
+        submitBtn.innerText = "ODESÍLÁM...";
+
+        // Save entry locally as backup so data is never lost
+        try {
+          const stored = JSON.parse(localStorage.getItem('nabor_registrace') || '[]');
+          stored.push({
+            jmeno,
+            vek,
+            kontakt,
+            zajem,
+            datum: new Date().toISOString()
+          });
+          localStorage.setItem('nabor_registrace', JSON.stringify(stored));
+        } catch (err) {
+          console.error("Local storage save error:", err);
+        }
+
+        setTimeout(() => {
+          submitBtn.disabled = false;
+          submitBtn.innerText = "⚔️ CHCI PŘIJÍT NA TRÉNINK";
+
+          statusDiv.className = "text-center p-5 rounded-xl text-base font-bold bg-amber-500/20 border border-amber-400 text-amber-300 mt-4 shadow-xl";
+          statusDiv.innerHTML = "Děkujeme! Ozveme se ti a domluvíme první trénink. ⚔️";
+          statusDiv.classList.remove('hidden');
+
+          form.reset();
+        }, 500);
+      });
+    });
+  </script>
+</body>
+</html>
