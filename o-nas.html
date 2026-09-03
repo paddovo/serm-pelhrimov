@@ -25,7 +25,6 @@
         <a href="o-nas.html" class="text-xs font-bold text-amber-400 uppercase tracking-widest">ŠKOLA</a>
         <a href="kurzy.html" class="text-xs font-semibold text-slate-300 hover:text-amber-400 uppercase tracking-widest">TRÉNINKY</a>
         <a href="discipliny.html" class="text-xs font-semibold text-slate-300 hover:text-amber-400 uppercase tracking-widest">ZBRANĚ</a>
-        <a href="galerie.html" class="text-xs font-semibold text-slate-300 hover:text-amber-400 uppercase tracking-widest">GALERIE</a>
         <a href="kontakt.html" class="text-xs font-semibold text-slate-300 hover:text-amber-400 uppercase tracking-widest">KONTAKT</a>
       </nav>
 
@@ -43,7 +42,6 @@
       <a href="o-nas.html" class="block text-sm font-bold text-amber-400 uppercase py-2 border-b border-slate-800">ŠKOLA</a>
       <a href="kurzy.html" class="block text-sm font-semibold text-slate-200 hover:text-amber-400 uppercase py-2 border-b border-slate-800">TRÉNINKY</a>
       <a href="discipliny.html" class="block text-sm font-semibold text-slate-200 hover:text-amber-400 uppercase py-2 border-b border-slate-800">ZBRANĚ</a>
-      <a href="galerie.html" class="block text-sm font-semibold text-slate-200 hover:text-amber-400 uppercase py-2 border-b border-slate-800">GALERIE</a>
       <a href="kontakt.html" class="block text-sm font-semibold text-slate-200 hover:text-amber-400 uppercase py-2 border-b border-slate-800">KONTAKT</a>
       <a href="kontakt.html" class="block w-full text-center bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-3 rounded text-xs uppercase tracking-wider mt-4">KONTAKT ➔</a>
     </div>
@@ -77,38 +75,8 @@
           <p class="text-slate-300 text-xs sm:text-sm">Zkušení trenéři s dlouholetou praxí v evropských bojových uměních.</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <!-- LEKTOR 1 -->
-          <div class="bg-[#181a22] border border-slate-800 hover:border-amber-500/40 rounded-2xl p-8 space-y-4 transition-all">
-            <div class="flex items-center gap-4">
-              <div class="w-16 h-16 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-2xl font-serif font-bold shrink-0">
-                🗡️
-              </div>
-              <div>
-                <h3 class="text-xl font-serif font-bold text-slate-100 uppercase">[Jméno Hlavního Lektora]</h3>
-                <span class="text-xs text-amber-400 font-bold uppercase tracking-wider block">Hlavní instruktor – Dlouhý meč</span>
-              </div>
-            </div>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              Věnuje se rekonstrukci německé šermířské školy Liechtenauera. Zaměřuje se na metodiku výuky začátečníků, biomechaniku seků a biomechanickou bezpečnost při sparringu.
-            </p>
-          </div>
-
-          <!-- LEKTOR 2 -->
-          <div class="bg-[#181a22] border border-slate-800 hover:border-amber-500/40 rounded-2xl p-8 space-y-4 transition-all">
-            <div class="flex items-center gap-4">
-              <div class="w-16 h-16 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-2xl font-serif font-bold shrink-0">
-                ⚔️
-              </div>
-              <div>
-                <h3 class="text-xl font-serif font-bold text-slate-100 uppercase">[Jméno Lektora Tesáku]</h3>
-                <span class="text-xs text-amber-400 font-bold uppercase tracking-wider block">Instruktor – Tesák & Ringen</span>
-              </div>
-            </div>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              Specialista na jednoruční tesák podle Lecküchnera a historický zápas Ringen. Vyučuje prácu s distancí, rychlost reakce a taktické rozhodování v boji zblízka.
-            </p>
-          </div>
+        <div id="coaches-container" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Dynamicky načteno z localStorage / skriptu -->
         </div>
       </div>
 
@@ -121,5 +89,48 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const defaultCoaches = [
+        {
+          name: "Martin Dvořák",
+          role: "Hlavní instruktor – Dlouhý meč",
+          bio: "Věnuje se rekonstrukci německé šermířské školy Liechtenauera s více než 10 lety praxe. Zaměřuje se na metodiku výuky začátečníků a biomechaniku seků.",
+          image: "images/trener-1.jpg"
+        },
+        {
+          name: "Jan Novotný",
+          role: "Instruktor – Tesák & Ringen",
+          bio: "Specialista na jednoruční tesák podle Lecküchnera a historický zápas Ringen. Vyučuje práci s distancí, rychlost reakce a taktické rozhodování v boji zblízka.",
+          image: "images/trener-2.jpg"
+        },
+        {
+          name: "Petr Svoboda",
+          role: "Instruktor – Začátečníci & Fyzická příprava",
+          bio: "Vede fyzickou přípravu a kondiční drily. Stará se o metodické vedení nových členů a průpravná cvičení se zbraní.",
+          image: "images/trener-3.jpg"
+        }
+      ];
+
+      const storedCoaches = localStorage.getItem("serm_coaches");
+      const coaches = storedCoaches ? JSON.parse(storedCoaches) : defaultCoaches;
+      const container = document.getElementById("coaches-container");
+
+      if (container) {
+        container.innerHTML = coaches.map((coach, index) => `
+          <div class="bg-[#181a22] border border-slate-800 hover:border-amber-500/40 rounded-2xl p-6 flex flex-col items-center text-center space-y-4 transition-all group">
+            <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-amber-500/40 shadow-lg shrink-0 bg-[#0f1015]">
+              <img src="${coach.image || 'images/logo.png'}" alt="${coach.name}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" onerror="this.onerror=null; this.src='images/logo.png';">
+            </div>
+            <div class="space-y-1">
+              <h3 class="text-xl font-serif font-bold text-slate-100 uppercase">${coach.name}</h3>
+              <span class="text-xs text-amber-400 font-bold uppercase tracking-wider block">${coach.role}</span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed">${coach.bio}</p>
+          </div>
+        `).join("");
+      }
+    });
+  </script>
 </body>
 </html>
