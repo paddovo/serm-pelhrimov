@@ -1,12 +1,45 @@
-// Main JavaScript for menu toggles
+// Main JavaScript for mobile drawer toggle & interactivity
 document.addEventListener('DOMContentLoaded', () => {
-  // Mobile drawer toggle
   const toggleBtn = document.getElementById('mobile-menu-toggle');
   const drawer = document.getElementById('mobile-drawer');
+  const closeBtn = document.getElementById('mobile-drawer-close');
+  const mobileLinks = document.querySelectorAll('.mobile-link');
 
-  if (toggleBtn && drawer) {
-    toggleBtn.addEventListener('click', () => {
-      drawer.classList.toggle('hidden');
+  function openDrawer() {
+    if (drawer) {
+      drawer.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function closeDrawer() {
+    if (drawer) {
+      drawer.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+  }
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (drawer && drawer.classList.contains('hidden')) {
+        openDrawer();
+      } else {
+        closeDrawer();
+      }
     });
   }
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      closeDrawer();
+    });
+  }
+
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      closeDrawer();
+    });
+  });
 });

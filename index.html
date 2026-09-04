@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Škola historického šermu Pelhřimov | Dlouhý meč, tesák a ringen</title>
   <meta name="description" content="Škola historického šermu v Pelhřimově. Trénujeme dlouhý meč, tesák a ringen. Poznej bojové umění evropského středověku.">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="favicon.ico">
   <meta property="og:title" content="Škola historického šermu Pelhřimov">
@@ -14,7 +15,9 @@
 <body class="bg-[#0f1015] text-slate-100 font-sans antialiased selection:bg-amber-500 selection:text-slate-950 flex flex-col min-h-screen">
 
   <!-- STICKY HEADER / NAVIGATION -->
-  <header class="fixed top-0 left-0 right-0 z-[100] bg-[#0f1015] shadow-xl  border-b border-amber-500/20 py-3">
+    <!-- STICKY HEADER / NAVIGATION -->
+    <!-- STICKY HEADER / NAVIGATION -->
+  <header class="fixed top-0 left-0 right-0 z-[100] bg-[#0f1015] shadow-xl border-b border-amber-500/20 py-3">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-3 group">
         <img src="images/logo.png" alt="Škola historického šermu Pelhřimov" class="h-11 w-auto object-contain group-hover:scale-105 transition-transform">
@@ -38,18 +41,35 @@
         </a>
       </div>
 
-      <button id="mobile-menu-toggle" class="md:hidden text-slate-300 hover:text-amber-400 p-2 text-xl" aria-label="Otevřít menu">
+      <button id="mobile-menu-toggle" class="md:hidden text-slate-300 hover:text-amber-400 p-2 text-2xl focus:outline-none" aria-label="Otevřít menu">
         ☰
       </button>
     </div>
 
-    <!-- Mobile Drawer -->
-    <div id="mobile-drawer" class="hidden md:hidden bg-[#0f1015] border-b border-amber-500/20 px-6 pt-4 pb-6 space-y-4">
-      <a href="o-nas.html" class="block text-sm font-semibold text-slate-200 hover:text-amber-400 uppercase py-2 border-b border-slate-800">ŠKOLA</a>
-      <a href="kurzy.html" class="block text-sm font-semibold text-slate-200 hover:text-amber-400 uppercase py-2 border-b border-slate-800">TRÉNINKY</a>
-      <a href="discipliny.html" class="block text-sm font-semibold text-slate-200 hover:text-amber-400 uppercase py-2 border-b border-slate-800">ZBRANĚ</a>
-      <a href="kontakt.html" class="block text-sm font-semibold text-slate-200 hover:text-amber-400 uppercase py-2 border-b border-slate-800">KONTAKT</a>
-      <a href="kontakt.html" class="block w-full text-center bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-3 rounded text-xs uppercase tracking-wider mt-4">KONTAKT ➔</a>
+    <!-- Mobile Drawer Overlay -->
+    <div id="mobile-drawer" style="background-color: #0f1015 !important; background: #0f1015 !important;" class="mobile-overlay fixed inset-0 flex flex-col justify-between p-6 overflow-y-auto hidden transition-all duration-300">
+      <div class="flex items-center justify-between pb-6 border-b border-amber-500/20">
+        <div class="flex items-center gap-3">
+          <img src="images/logo.png" alt="Logo" class="h-10 w-auto object-contain">
+          <span class="font-bold text-amber-400 font-serif uppercase tracking-wider text-sm">ŠHŠ Pelhřimov</span>
+        </div>
+        <button id="mobile-drawer-close" class="text-slate-300 hover:text-amber-400 text-3xl font-light p-2 focus:outline-none" aria-label="Zavřít menu">
+          ✕
+        </button>
+      </div>
+
+      <nav class="flex flex-col items-center justify-center my-auto py-8 space-y-6 text-center">
+        <a href="o-nas.html" class="mobile-link text-lg font-bold text-slate-100 hover:text-amber-400 font-serif uppercase tracking-widest py-2">ŠKOLA</a>
+        <a href="kurzy.html" class="mobile-link text-lg font-bold text-slate-100 hover:text-amber-400 font-serif uppercase tracking-widest py-2">TRÉNINKY</a>
+        <a href="discipliny.html" class="mobile-link text-lg font-bold text-slate-100 hover:text-amber-400 font-serif uppercase tracking-widest py-2">ZBRANĚ</a>
+        <a href="kontakt.html" class="mobile-link text-lg font-bold text-slate-100 hover:text-amber-400 font-serif uppercase tracking-widest py-2">KONTAKT</a>
+        <a href="vyzkousej-si-serm.html" class="mobile-link w-full max-w-xs bg-amber-500 hover:bg-amber-400 text-slate-950 font-black py-4 rounded-xl text-xs uppercase tracking-wider shadow-lg shadow-amber-500/20 transition-all text-center mt-4">⚔️ VYZKOUŠET ŠERM ➔</a>
+      </nav>
+
+      <div class="pt-6 border-t border-slate-800 text-center text-xs text-slate-400 space-y-2">
+        <p>📍 Pelhřimovská sportovní hala</p>
+        <p>✉️ <a href="mailto:info@sermpelhrimov.cz" class="text-amber-400 hover:underline">info@sermpelhrimov.cz</a> | 📞 <a href="tel:+420777757333" class="text-amber-400 hover:underline">+420 777 757 333</a></p>
+      </div>
     </div>
   </header>
 
